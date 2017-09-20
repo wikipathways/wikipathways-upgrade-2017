@@ -1,0 +1,95 @@
+[submodule "extensions/LabeledSectionTransclusion"]
+	path = extensions/LabeledSectionTransclusion
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/LabeledSectionTransclusion
+	branch = REL1_29
+[submodule "extensions/EmbedVideo"]
+	path = extensions/EmbedVideo
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/EmbedVideo
+	branch = REL1_29
+[submodule "extensions/RSS"]
+	path = extensions/RSS
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/RSS
+	branch = REL1_29
+[submodule "extensions/googleAnalytics"]
+	path = extensions/googleAnalytics
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/googleAnalytics
+	branch = REL1_29
+[submodule "extensions/UserSnoop"]
+	path = extensions/UserSnoop
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserSnoop
+	branch = REL1_29
+[submodule "extensions/UserMerge"]
+	path = extensions/UserMerge
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserMerge
+	branch = REL1_29
+[submodule "extensions/ContributionScores"]
+	path = extensions/ContributionScores
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ContributionScores
+	branch = REL1_29
+[submodule "extensions/ConfirmEdit"]
+	path = extensions/ConfirmEdit
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ConfirmEdit
+	branch = REL1_29
+[submodule "extensions/Gadgets"]
+	path = extensions/Gadgets
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Gadgets
+	branch = REL1_29
+[submodule "extensions/Nuke"]
+	path = extensions/Nuke
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Nuke
+	branch = REL1_29
+[submodule "extensions/ParserFunctions"]
+	path = extensions/ParserFunctions
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ParserFunctions
+	branch = REL1_29
+[submodule "extensions/Renameuser"]
+	path = extensions/Renameuser
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Renameuser
+	branch = REL1_29
+[submodule "extensions/Vector"]
+	path = extensions/Vector
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Vector
+	branch = REL1_29
+[submodule "extensions/WikiEditor"]
+	path = extensions/WikiEditor
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/WikiEditor
+	branch = REL1_29
+[submodule "extensions/Cite"]
+	path = extensions/Cite
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Cite
+	branch = REL1_29
+[submodule "extensions/ImageMap"]
+	path = extensions/ImageMap
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ImageMap
+	branch = REL1_29
+[submodule "extensions/InputBox"]
+	path = extensions/InputBox
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/InputBox
+	branch = REL1_29
+[submodule "extensions/Interwiki"]
+	path = extensions/Interwiki
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Interwiki
+	branch = REL1_29
+[submodule "extensions/SyntaxHighlight_GeSHi"]
+	path = extensions/SyntaxHighlight_GeSHi
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SyntaxHighlight_GeSHi
+	branch = REL1_29
+[submodule "skins/Vector"]
+	path = skins/Vector
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/skins/Vector
+	branch = REL1_29
+[submodule "extensions/CiteThisPage"]
+	path = extensions/CiteThisPage
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CiteThisPage
+	branch = REL1_29
+[submodule "vendor"]
+	path = vendor
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/vendor
+	branch = REL1_29
+[submodule "mediawiki"]
+	path = mediawiki
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/core.git
+        branch = REL1_29
+[submodule "extensions/BiblioPlus"]
+	path = extensions/BiblioPlus
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/BiblioPlus

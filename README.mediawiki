@@ -1,0 +1,12 @@
+Basic notes on site setup
+
+# git clone mw
+#  cd mw
+#  composer update --no-dev
+#  php maintenance/install.php --dbname=path_test --dbuser=wikiuser --dbpass=wikipass --pass=none1234 WikiPathways MarkAHershberger
+#  for i in LocalSettings.php composer.lock; do mv $i ..; ln -s ../$i .; done
+#  ln -s ../vendor .
+#  cd ..;
+#  echo 'require_once "$IP/extensions/WikiPathways/WikiPathways.php";' >> LocalSettings.php
+#  mkdir extensions/WikiPathways
+#  ln -s ../../extensions/WikiPathways mediawiki/
