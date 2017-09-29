@@ -6,6 +6,7 @@
 		 (c-basic-offset . 4)
 		 (indent-tabs-mode . t)
 		 (lice:default-license . "gpl-3.0")
+		 (lice:copyright-holder . "J. David Gladstone Institutes")
 		 (eval . (progn (when (fboundp 'delete-trailing-whitespace)
 						  (delete-trailing-whitespace))
 						(tabify (point-min) (point-max))))
