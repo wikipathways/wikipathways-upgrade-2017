@@ -4,7 +4,7 @@
 	branch = REL1_29
 [submodule "extensions/EmbedVideo"]
 	path = extensions/EmbedVideo
-	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/EmbedVideo
+	url = https://github.com/HydraWiki/mediawiki-embedvideo.git
 	branch = REL1_29
 [submodule "extensions/RSS"]
 	path = extensions/RSS
@@ -94,7 +94,15 @@
 	path = mediawiki
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/core.git
         branch = REL1_29
+[submodule "extensions/Scribunto"]
+	path = extensions/Scribunto
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Scribunto
+        branch = REL1_29
 [submodule "extensions/BiblioPlus"]
 	path = extensions/BiblioPlus
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/BiblioPlus
+        branch = REL1_29
+[submodule "extensions/TitleBlacklist"]
+	path = extensions/TitleBlacklist
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/TitleBlacklist
         branch = REL1_29
