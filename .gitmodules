@@ -106,3 +106,6 @@
 	path = extensions/TitleBlacklist
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/TitleBlacklist
         branch = REL1_29
+[submodule "extensions/UserLoginLog"]
+	path = extensions/UserLoginLog
+	url = https://github.com/wikipathways/mediawiki-extensions-UserLoginLog.git
