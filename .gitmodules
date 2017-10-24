@@ -58,6 +58,10 @@
 	path = extensions/Cite
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Cite
 	branch = REL1_29
+[submodule "extensions/Scribunto"]
+	path = extensions/Scribunto
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Scribunto
+	branch = REL1_29
 [submodule "extensions/ImageMap"]
 	path = extensions/ImageMap
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ImageMap
@@ -93,3 +97,4 @@
 [submodule "extensions/BiblioPlus"]
 	path = extensions/BiblioPlus
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/BiblioPlus
+        branch = REL1_29
