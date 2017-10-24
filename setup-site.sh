@@ -14,3 +14,6 @@ done
 
 echo installing mbstring, mysql, and xml for php
 sudo apt install php-mbstring php-mysql php-xml
+
+chmod 1777 mediawiki/images
+
