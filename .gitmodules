@@ -108,4 +108,4 @@
         branch = REL1_29
 [submodule "extensions/UserLoginLog"]
 	path = extensions/UserLoginLog
-	url = https://github.com/wikipathways/mediawiki-extensions-UserLoginLog.git
+	url = https://github.com/mwstake/mediawiki-extensions-UserLoginLog.git
