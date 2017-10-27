@@ -1,9 +1,19 @@
 {
+	"name": "MostEditedPathwyas",
+	"version": "1.0",
+	"license-name": "GPL-2.0+",
+	"author": [
+		"[http://mwstake.org Mark A. Hershberger]",
+		"..."
+	],
+	"requires": {
+		"MediaWiki": ">=1.29"
+	},
 	"SpecialPages": {
-		"MostEditedPathwaysPage": "MostEditedPathwaysPage"
+		"MostEditedPathwaysPage": "WikiPathways\\MostEditedPathways"
 	},
 	"AutoloadClasses": {
-		"MostEditedPathwaysPage": "src/MostEditedPathwaysPage.php"
+		"WikiPathways\\MostEditedPathways": "src/MostEditedPathways.php"
 	},
 	"manifest_version": 2
 }

@@ -1,47 +1,28 @@
 <?php
-require_once "QueryPage.php";
-
-class MostEditedPathwaysPage extends SpecialPage {
-	function MostEditedPathwaysPage() {
-		SpecialPage::SpecialPage( "MostEditedPathwaysPage" );
-		self::loadMessages();
-	}
-
-	function execute( $par ) {
-		global $wgRequest, $wgOut;
-
-		$this->setHeaders();
-
-		list( $limit, $offset ) = wfCheckLimits();
-		// Most edited pathway articles
-		$ppp = new PathwayQueryPage( NS_PATHWAY );
-
-		$ppp->doQuery( $offset, $limit );
-
-		return true;
-	}
-
-	static function loadMessages() {
-		static $messagesLoaded = false;
-		global $wgMessageCache;
-		if ( $messagesLoaded ) { return true;
-		}
-		$messagesLoaded = true;
-
-		require __DIR__ . '/MostEditedPathwaysPage.i18n.php';
-		foreach ( $allMessages as $lang => $langMessages ) {
-			$wgMessageCache->addMessages( $langMessages, $lang );
-		}
-		return true;
-	}
-
-}
-
-class PathwayQueryPage extends QueryPage {
+/**
+ * Copyright (C) 2017  J. David Gladstone Institutes
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author
+ * @author Mark A. Hershberger
+ */
+class MostEditedPathwaysPage extends QueryPage {
 	private $namespace;
-
-	function __construct( $namespace ) {
-		$this->namespace = $namespace;
+	public function __construct() {
+		parent::__construct( "MostEditedPathwaysPage" );
+		$this->namespace = NS_PATHWAY;
 		$this->taggedIds = CurationTag::getPagesForTag( 'Curation:Tutorial' );
 	}
 
@@ -53,12 +34,13 @@ class PathwayQueryPage extends QueryPage {
 		# page_counter is not indexed
 		return true;
 	}
+
 	function isSyndicated() {
- return false;
- }
+        return false;
+    }
 
 	function getSQL() {
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 		list( $revision, $page ) = $dbr->tableNamesN( 'revision', 'page' );
 		return
 			"SELECT
