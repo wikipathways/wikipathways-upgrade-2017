@@ -1,0 +1,9 @@
+{
+	"SpecialPages": {
+		"MostEditedPathwaysPage": "MostEditedPathwaysPage"
+	},
+	"AutoloadClasses": {
+		"MostEditedPathwaysPage": "src/MostEditedPathwaysPage.php"
+	},
+	"manifest_version": 2
+}
