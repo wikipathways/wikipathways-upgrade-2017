@@ -1,0 +1,20 @@
+{
+	"name": "PopularPathways",
+	"version": "1.0",
+	"license-name": "GPL-2.0+",
+	"author": [
+		"[http://mwstake.org Mark A. Hershberger]",
+		"..."
+	],
+	"requires": {
+		"MediaWiki": ">=1.29"
+	},
+	"SpecialPages": {
+		"PopularPathwaysPage": "WikiPathways\\PopularPathways"
+	},
+	"AutoloadClasses": {
+		"WikiPathways\\PopularPathways": "src/PopularPathways.php",
+		"WikiPathways\\PPQuery": "src/PPQuery.php"
+	},
+	"manifest_version": 2
+}
