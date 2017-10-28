@@ -18,12 +18,15 @@
  * @author
  * @author Mark A. Hershberger
  */
-class MostEditedPathwaysPage extends QueryPage {
+namespace WikiPathways;
+
+class MostEditedPathways extends \QueryPage {
 	private $namespace;
+	private $taggedIds;
+
 	public function __construct() {
 		parent::__construct( "MostEditedPathwaysPage" );
 		$this->namespace = NS_PATHWAY;
-		$this->taggedIds = CurationTag::getPagesForTag( 'Curation:Tutorial' );
 	}
 
 	function getName() {
@@ -36,8 +39,8 @@ class MostEditedPathwaysPage extends QueryPage {
 	}
 
 	function isSyndicated() {
-        return false;
-    }
+		return false;
+	}
 
 	function getSQL() {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -57,10 +60,9 @@ class MostEditedPathwaysPage extends QueryPage {
 			HAVING COUNT(*) > 1";
 	}
 
-	private $taggedIds;
-
 	function formatResult( $skin, $result ) {
 		global $wgLang, $wgContLang;
+		$this->taggedIds = CurationTag::getPagesForTag( 'Curation:Tutorial' );
 		if ( in_array( $result->id, $this->taggedIds ) ) {
 			return null;
 		}

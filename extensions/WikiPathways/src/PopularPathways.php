@@ -23,7 +23,7 @@ namespace WikiPathways;
 use QueryPage;
 
 class PopularPathways extends QueryPage {
-    function __construct() {
+	function __construct() {
 		parent::__construct( "PopularPathways" );
 	}
 

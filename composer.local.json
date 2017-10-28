@@ -1,1 +1,9 @@
-{}
+{
+    "extra": {
+	"merge-plugin": {
+	    "include": [
+		"extensions/UserLoginLog/extension.json"
+	    ]
+        }
+    }
+}
