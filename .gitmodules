@@ -113,5 +113,5 @@
 	path = extensions/CodeEditor
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/CodeEditor
 [submodule "extensions/WikiPathways/GPML"]
-	path = extensions/WikiPathways/GPML
+	path = extensions/GPML
 	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-GPML.git
