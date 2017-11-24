@@ -1,0 +1,49 @@
+== MediaWiki conventions ==
+
+=== Don't assign by reference ===
+The following assignment style is from ancient php and should not be used:
+<strike><source lang="php">
+$dbr =& wfGetDB( DB_SLAVE );
+</source></strike>
+The ampersand isn't necessary:
+<source lang="php">
+$dbr = wfGetDB( DB_SLAVE );
+</source>
+
+=== Use $dbr->select() ===
+Don't create a select statement by hand and then feed them to <code>query()</code> like the following:
+<strike><source lang="php">
+		$query = "SELECT page_title FROM page
+				WHERE page_namespace = $ns AND page_is_redirect = 0";
+		$res = $dbr->query( $query, __METHOD__ );
+</source></strike>
+
+Instead, use select so that escaping, etc. are automatically handled:
+<source lang="php">
+		$res = $dbr->select(
+			'page', 'page_title',
+			[ 'page_namespace' => $ns, 'page_is_redirect' => 0 ], __METHOD__
+		);
+</source>
+
+=== Iterating over a database result ===
+Don't use <code>while</code>:
+<striike><source lang="php">
+while ( $row = $dbr->fetchRow( $res ) ) {
+    ...
+}
+</source></strike>
+Instead, use the simpler <code>foreach</code>:
+<source lang="php">
+foreach ( $res as $row ) {
+    ...
+}
+</source>
+=== Freeing a DB result usually isn't necessary ===
+If the DB result is used within the function, then when it falls out of scope, it will automatically be freed.
+
+Usually, the following call is not needed:
+<strike><source lang="php">
+$dbr->freeResult( $res );
+</source></strike>
+

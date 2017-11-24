@@ -17,3 +17,4 @@ $(document.ready( function() { CustomizeModificationsOfSidebar(); } );
 == Other Documents ==
 
 * [[docs/ConvertingToResourceLoader.mediawiki|Converting AuthorInfo to ResourceLoader]]
+* [[docs/MediaWiki_conventions.mediawiki|MediaWiki conventions]]
