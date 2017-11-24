@@ -1,16 +1,16 @@
-* Run setup-site.sh to set up the site after doing an initial checkout
-* wikipathways.username should be replaced with a "proper" mwjs fetching of the user name.  you can find this in mw.config.get("wgUserName"
-* Modify MediaWiki:Common.js so that it executes after things are loaded
+# Run setup-site.sh to set up the site after doing an initial checkout
+# wikipathways.username should be replaced with a "proper" mwjs fetching of the user name.  you can find this in mw.config.get("wgUserName"
+# Modify MediaWiki:Common.js so that it executes after things are loaded
 ** Surround everything with
-<syntaxhighlight lang="javascript">
+<source lang="javascript">
 mw.loader.using( ['mediawiki.user'] ).done( function() {
 ...
 } );
-</syntaxhighlight>
+</source>
 ** Change addOnloadHook() to $(document.ready( ...
-<syntaxhighlight lang="javascript">
+<source lang="javascript">
 $(document.ready( function() { CustomizeModificationsOfSidebar(); } );
-</syntaxhighlight>
+</source>
 * Moving style attributes from elements surrounding pathways to wpi.Pathway module
 ** Found at extensions/GPML/modules/Pathway.*
 ** Allows de-coupling style and behavior from content
