@@ -28,7 +28,7 @@ Instead, use select so that escaping, etc. are automatically handled:
 
 === Iterating over a database result ===
 Don't use <code>while</code>:
-<striike><source lang="php">
+<strike><source lang="php">
 while ( $row = $dbr->fetchRow( $res ) ) {
     ...
 }
