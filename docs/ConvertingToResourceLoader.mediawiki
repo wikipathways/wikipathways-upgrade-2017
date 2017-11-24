@@ -33,18 +33,18 @@ AuthorInfo.init('authorInfoContainer', '14229', '4', '');
 This is replaced with [https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes data attributes] on an <tt>&lt;div></tt> element:
 <source lang="html">
 <div id="authorInfoContainer" data-pageid="14229" data-limit="4" data-showbots=""></div>
-</source>.
+</source>
 
 The JQuery [https://api.jquery.com/ready/ <code>$(document).ready()</code>] is used [https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/blob/da7f215b6463bef98ecd74b8fc17418964567f62/modules/AuthorInfo.js#L1 in the <tt>wpi.AuthorInfo</tt> module] to find this <tt>&lt;div></tt> and populate it:
 <source lang="javascript">
 $(document).ready(function() {AuthorInfo.init("authorInfoContainer");});
 </source>
 
-Since the Pathway namespace is handled by the GPML content handler, it uses [https://www.mediawiki.org/wiki/Localisation MediaWiki's Localisation system] to handle the HTML structure (where appropriate) that is sent to the browser. To find the right message to modify, add "<code>?uselang=qqx</code>" to the url being displayed.  For example, doing this on "Aryl Hydrocarbon Receptor (Homo Sapiens)" shows
+Since the Pathway namespace is handled by the GPML content handler, it uses [https://www.mediawiki.org/wiki/Localisation MediaWiki's Localisation system] to handle the HTML structure (where appropriate) that is sent to the browser. To find the right message to modify, add "<code>?uselang=qqx</code>" to the url being displayed.  For example, doing this on "[http://vm1.wikipathways.org/Pathway:WP2586?uselang=qqx Aryl Hydrocarbon Receptor (Homo Sapiens)]" shows
 <pre>
 (wp-gpml-authorinfo: 33306, 5, )
 </pre>
-as the first item on the page.  This shows you that three parameters ("33306", "5", and "") are passed to the the MediaWiki message <tt>wp-gpml-authorinfo</tt> which you can [http://vm1.wikipathways.org/index.php?title=MediaWiki:Wp-gpml-authorinfo&action=edit edit on the wiki]. (The link is to the dev server vm1 here.)
+as the first item on the page.  This shows you that three parameters ("33306", "5", and "") are passed to the the MediaWiki message <tt>wp-gpml-authorinfo</tt> which you can [http://vm1.wikipathways.org/index.php?title=MediaWiki:Wp-gpml-authorinfo&action=edit edit on the wiki]. (All links are to the dev server vm1 here.)
 
 Parameters of the message are identified by location.  So, for the first parameter, <tt>$1</tt> is used; for the second, <tt>$2</tt is used; and so on.
 

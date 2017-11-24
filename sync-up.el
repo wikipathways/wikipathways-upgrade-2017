@@ -14,7 +14,8 @@
 
 (ascmd:add
  (list "/home/mah/client/gladstone/new.wikipathways.org/"
-	   (concat "rsync -a --delete --exclude .git --exclude mediawiki/images "
+	   (concat "rsync -a --delete --exclude .git --exclude /mediawiki/images "
+			   "--exclude /logs"
 			   "/home/mah/client/gladstone/new.wikipathways.org/ "
 			   "vm1:/home/wikipathways.org/")))
 
