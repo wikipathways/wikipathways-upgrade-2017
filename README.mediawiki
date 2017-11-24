@@ -1,3 +1,5 @@
+== Installation ==
+
 # Run setup-site.sh to set up the site after doing an initial checkout
 # wikipathways.username should be replaced with a "proper" mwjs fetching of the user name.  you can find this in mw.config.get("wgUserName"
 # Modify MediaWiki:Common.js so that it executes after things are loaded
@@ -11,3 +13,7 @@ mw.loader.using( ['mediawiki.user'] ).done( function() {
 <source lang="javascript">
 $(document.ready( function() { CustomizeModificationsOfSidebar(); } );
 </source>
+
+== Other Documents ==
+
+* [[docs/ConvertingToResourceLoader.mediawiki|Converting AuthorInfo to ResourceLoader]]
