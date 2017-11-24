@@ -88,7 +88,7 @@
 	branch = REL1_29
 [submodule "vendor"]
 	path = vendor
-	url = https://gerrit.wikimedia.org/r/p/mediawiki/vendor
+	url = https://github.com/wikipathways/mediawiki-vendor.git
 	branch = REL1_29
 [submodule "mediawiki"]
 	path = mediawiki
