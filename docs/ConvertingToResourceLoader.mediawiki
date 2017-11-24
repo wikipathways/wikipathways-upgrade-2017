@@ -1,0 +1,11 @@
+== How to adapt current CSS and JS to MediaWiki's ResourceLoader ==
+
+In the years since WikiPathways was set up, MediaWiki has created some good tools for managing CSS and JS assets.  There are documents like [https://www.mediawiki.org/wiki/ResourceLoader/Migration_guide_for_extension_developers the migration guide for extension developers] and [https://www.mediawiki.org/wiki/ResourceLoader/Writing_a_MobileFrontend_friendly_ResourceLoader_module the instructions for writing a MobileFrontend-friendly ResourceLoader module] in addition to the [https://www.mediawiki.org/wiki/ResourceLoader top-level ResourceLoader page on MediaWiki.org] that be essential resources.
+
+This document does not replace the above resources, but it walks through the work I did to adapt the AuthorInfo pieces into MediaWiki 1.29 for the 2017 work I did on the WikiPathways upgrade.
+
+=== AuthorInfo: what it does ===
+
+AuthorInfo is what WikiPathways uses to present the most relevent authors to people who are browsing pathways on the site.  It also provides a [https://www.mediawiki.org/wiki/Manual:Tag_extensions tag parser] that exposes the functionality so that it can be used in wikitext.
+
+Initially, [https://github.com/wikipathways/wikipathways.org/blob/master/wpi/extensions/AuthorInfo/AuthorInfo.php AuthorInfo.php] was a monolithic php file containing 
