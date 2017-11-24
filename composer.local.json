@@ -1,8 +1,12 @@
 {
+	"require": {
+		"symfony/process": "*"
+	},
 	"extra": {
 		"merge-plugin": {
 			"include": [
-				"extensions/UserLoginLog/extension.json"
+				"extensions/UserLoginLog/extension.json",
+				"extensions/SyntaxHighlight_GeSHi/extension.json"
 			]
 		}
 	}
