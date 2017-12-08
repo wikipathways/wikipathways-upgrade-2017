@@ -15,4 +15,7 @@ done
 echo installing mbstring, mysql, and xml for php
 sudo apt install php-mbstring php-mysql php-xml python-pygments
 
+echo enable mod_headers
+sudo a2enmod headers
+
 chmod 1777 mediawiki/images
