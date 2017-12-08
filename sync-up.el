@@ -13,12 +13,13 @@
   (package-install 'auto-shell-command))
 
 (require 'auto-shell-command)
-(ascmd:add
- (list "/home/mah/client/gladstone/new.wikipathways.org/"
-	   (concat "rsync -av --delete --exclude .git --exclude /mediawiki/images "
-			   "--exclude /logs "
-			   "/home/mah/client/gladstone/new.wikipathways.org/ "
-			   "vm1:/home/wikipathways.org/")))
+(let ((this-dir (file-name-directory (buffer-file-name))))
+  (ascmd:add
+   (list this-dir
+		 (concat "rsync -av --delete --exclude .git --exclude /mediawiki/images "
+				 "--exclude /logs "
+				 this-dir " "
+				 "vm1:/home/wikipathways.org/"))))
 
 (provide 'sync-up)
 ;;; sync-up ends here
