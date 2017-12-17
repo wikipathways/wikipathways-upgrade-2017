@@ -6,3 +6,5 @@ RewriteRule ^/*$ /index.php [L,QSA]
 
 # Set headers
 Header set Referrer-Policy: unsafe-url
+
+RewriteRule ^/?wpi/ /extensions/WikiPathways/
