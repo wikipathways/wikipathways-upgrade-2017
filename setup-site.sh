@@ -12,10 +12,32 @@ for i in extensions/* skins/*; do
 	ln -s ../../$i mediawiki/$i
 done
 
-echo installing mbstring, mysql, and xml for php
-sudo apt install php-mbstring php-mysql php-xml python-pygments
+to_install=""
+is_installed() {
+    dpkg -l $1 > /dev/null  2>&1
+    if [ $? -ne 0 ]; then
+        to_install="$1 $to_install"
+    fi
+}
 
-echo enable mod_headers
-sudo a2enmod headers
+is_installed php-mbstring
+is_installed php-mysql
+is_installed php-xml
+is_installed python-pygments
 
-chmod 1777 mediawiki/images
+if [ -n "$to_install" ]; then
+    echo Installing: $to_install
+    sudo apt install $to_install
+fi
+
+if [ ! -L /etc/apache2/mods-enabled/headers.load ]; then
+    echo enable mod_headers
+    sudo a2enmod headers
+fi
+
+dir=mediawiki/images
+stdir=`stat -c %a mediawiki/images`
+if [ $stdir -ne 1777 ]; then
+    echo need to make images writable
+    sudo chmod 1777 $dir
+fi
