@@ -3,12 +3,12 @@
 git submodule init
 git submodule update
 for i in composer.lock vendor composer.local.json LocalSettings.php; do
-	rm -f mediawiki/$i
+	rm -rf mediawiki/$i
 	ln -s ../$i mediawiki
 done
 
 for i in extensions/* skins/*; do
-	rm -f mediawiki/$i
+	rm -rf mediawiki/$i
 	ln -s ../../$i mediawiki/$i
 done
 
