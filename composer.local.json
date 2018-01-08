@@ -1,7 +1,4 @@
 {
-	"require": {
-		"symfony/process": "*"
-	},
 	"extra": {
 		"merge-plugin": {
 			"include": [
