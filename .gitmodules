@@ -118,3 +118,6 @@
 [submodule "extensions/IFrame"]
 	path = extensions/IFrame
 	url = https://github.com/hexmode/mediawiki-iframe.git
+[submodule "extensions/GPMLConverter"]
+	path = extensions/GPMLConverter
+	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git
