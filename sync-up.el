@@ -17,7 +17,7 @@
   (ascmd:add
    (list this-dir
 		 (concat "rsync -av --delete --exclude .git --exclude /mediawiki/images "
-				 "--exclude /logs "
+				 "--exclude /logs --exclude '*~' --exclude '#*#' "
 				 this-dir " "
 				 "vm1:/home/wikipathways.org/"))))
 
