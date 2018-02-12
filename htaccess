@@ -1,8 +1,8 @@
 RewriteEngine On
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?(.*)$ /index.php?title=$1 [L,QSA]
-RewriteRule ^/*$ /index.php [L,QSA]
 
 # Set headers
 Header set Referrer-Policy: unsafe-url
