@@ -88,5 +88,5 @@
 							 (topmost-intro-cont first php-lineup-cascaded-calls +)
 							 ))
 		 (flycheck-phpcs-standard . "/home/mah/work/code/mediawiki/codesniffer/MediaWiki")
-         (flycheck-phpmd-rulesets . ("/home/mah/work/code/mediawiki/messdetector/phpmd-ruleset.xml"))
-         (magit-gerrit-ssh-creds . "mah@gerrit.wikimedia.org"))))
+		 (flycheck-phpmd-rulesets . ("/home/mah/work/code/mediawiki/messdetector/phpmd-ruleset.xml"))
+		 (magit-gerrit-ssh-creds . "mah@gerrit.wikimedia.org"))))
