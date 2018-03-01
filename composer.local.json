@@ -2,10 +2,12 @@
 	"extra": {
 		"merge-plugin": {
 			"include": [
-				"extensions/UserLoginLog/extension.json",
-				"extensions/SyntaxHighlight_GeSHi/extension.json"
+				"extensions/*/composer.json"
 			]
 		}
+	},
+	"require": {
+		"wikipathways/wikipathways": "dev-master"
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.2",
@@ -28,5 +30,11 @@
 			"minus-x fix .",
 			"phpcbf"
 		]
-	}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways.git"
+		}
+	]
 }
