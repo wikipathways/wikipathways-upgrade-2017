@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b30c01f5b9f5ad12667058d9a1e67ef",
+    "content-hash": "5435c2b1c14dfe229476ef39b42b9b22",
     "packages": [
         {
             "name": "composer/installers",
@@ -375,6 +375,7 @@
             ],
             "description": "Safe replacement to @ for suppressing warnings.",
             "homepage": "https://www.mediawiki.org/wiki/at-ease",
+            "abandoned": "wikimedia/at-ease",
             "time": "2015-09-18T07:02:06+00:00"
         },
         {
@@ -567,16 +568,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.4",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "09a5172057be8fc677840e591b17f385e58c7c0d"
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/09a5172057be8fc677840e591b17f385e58c7c0d",
-                "reference": "09a5172057be8fc677840e591b17f385e58c7c0d",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
                 "shasum": ""
             },
             "require": {
@@ -612,7 +613,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29T09:03:43+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "wikimedia/assert",
@@ -1326,12 +1327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML.git",
-                "reference": "5edf33f5436e849382328a9dab2bdedcf064cca1"
+                "reference": "4ab900995e52527270a45c06e617b7935c8c3c8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/5edf33f5436e849382328a9dab2bdedcf064cca1",
-                "reference": "5edf33f5436e849382328a9dab2bdedcf064cca1",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/4ab900995e52527270a45c06e617b7935c8c3c8f",
+                "reference": "4ab900995e52527270a45c06e617b7935c8c3c8f",
                 "shasum": ""
             },
             "require": {
@@ -1401,7 +1402,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/issues"
             },
-            "time": "2018-02-24T19:20:14+00:00"
+            "time": "2018-04-23T01:01:20+00:00"
         },
         {
             "name": "wikipathways/gpml-converter",
@@ -1409,12 +1410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git",
-                "reference": "2ef7cf0902abc875e3bb797681d5bc7084a41ce1"
+                "reference": "cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/2ef7cf0902abc875e3bb797681d5bc7084a41ce1",
-                "reference": "2ef7cf0902abc875e3bb797681d5bc7084a41ce1",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2",
+                "reference": "cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2",
                 "shasum": ""
             },
             "require": {
@@ -1437,9 +1438,9 @@
             },
             "autoload": {
                 "psr-4": {
-                    "WikiPathways\\GPMLConverter\\Tests\\": "tests/phpunit",
-                    "WikiPathways\\GPMLConverter\\Maintenance\\": "maintenance",
-                    "WikiPathways\\GPMLConverter\\": "src"
+                    "WikiPathways\\GPML\\Converter\\Tests\\": "tests/phpunit",
+                    "WikiPathways\\GPML\\Converter\\Maintenance\\": "maintenance",
+                    "WikiPathways\\GPML\\": "src"
                 }
             },
             "scripts": {
@@ -1484,7 +1485,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/tree/feature-mwupgrade",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/issues"
             },
-            "time": "2018-03-01T02:01:28+00:00"
+            "time": "2018-03-01T19:46:06+00:00"
         },
         {
             "name": "wikipathways/wikipathways",
@@ -1492,12 +1493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways.git",
-                "reference": "b8183d348f913bb4c7a4d5cbf609cf5bfb0cea7e"
+                "reference": "ba3e21cd09441e041a28b57610bc4a07cb4c5b52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/b8183d348f913bb4c7a4d5cbf609cf5bfb0cea7e",
-                "reference": "b8183d348f913bb4c7a4d5cbf609cf5bfb0cea7e",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/ba3e21cd09441e041a28b57610bc4a07cb4c5b52",
+                "reference": "ba3e21cd09441e041a28b57610bc4a07cb4c5b52",
                 "shasum": ""
             },
             "require": {
@@ -1541,7 +1542,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/issues"
             },
-            "time": "2018-03-01T02:06:36+00:00"
+            "time": "2018-04-23T13:57:42+00:00"
         },
         {
             "name": "zordius/lightncandy",
@@ -1594,23 +1595,23 @@
     "packages-dev": [
         {
             "name": "composer/spdx-licenses",
-            "version": "1.1.4",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "88c26372b1afac36d8db601cdf04ad8716f53d88"
+                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/88c26372b1afac36d8db601cdf04ad8716f53d88",
-                "reference": "88c26372b1afac36d8db601cdf04ad8716f53d88",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
+                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.2 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
                 "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
             },
             "type": "library",
@@ -1651,7 +1652,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2016-05-04T12:27:30+00:00"
+            "time": "2018-01-31T13:17:27+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1928,12 +1929,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "945a6c33e30b5ffeef81acd536abe566bfb6658f"
+                "reference": "07a712def7205d8921e6ff93c9ee12119def463e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/945a6c33e30b5ffeef81acd536abe566bfb6658f",
-                "reference": "945a6c33e30b5ffeef81acd536abe566bfb6658f",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/07a712def7205d8921e6ff93c9ee12119def463e",
+                "reference": "07a712def7205d8921e6ff93c9ee12119def463e",
                 "shasum": ""
             },
             "type": "library",
@@ -1953,7 +1954,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2018-02-19T15:52:47+00:00"
+            "time": "2018-04-20T16:19:58+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2380,23 +2381,23 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.7.5",
+            "version": "1.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
-                "sebastian/comparator": "^1.1|^2.0",
+                "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
             "require-dev": {
@@ -2439,7 +2440,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-19T10:16:54+00:00"
+            "time": "2018-04-18T13:57:24+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3342,16 +3343,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.4",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "26b6f419edda16c19775211987651cb27baea7f1"
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/26b6f419edda16c19775211987651cb27baea7f1",
-                "reference": "26b6f419edda16c19775211987651cb27baea7f1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
                 "shasum": ""
             },
             "require": {
@@ -3407,20 +3408,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29T09:03:43+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.4",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "53f6af2805daf52a43b393b93d2f24925d35c937"
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/53f6af2805daf52a43b393b93d2f24925d35c937",
-                "reference": "53f6af2805daf52a43b393b93d2f24925d35c937",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
                 "shasum": ""
             },
             "require": {
@@ -3463,7 +3464,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-18T22:16:57+00:00"
+            "time": "2018-04-03T05:22:50+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3526,16 +3527,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.4",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "472a9849930cf21f73abdb02240f17cf5b5bd1a7"
+                "reference": "951643091b39a6fd40fce56cd16e21e12bef3feb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/472a9849930cf21f73abdb02240f17cf5b5bd1a7",
-                "reference": "472a9849930cf21f73abdb02240f17cf5b5bd1a7",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/951643091b39a6fd40fce56cd16e21e12bef3feb",
+                "reference": "951643091b39a6fd40fce56cd16e21e12bef3feb",
                 "shasum": ""
             },
             "require": {
@@ -3591,20 +3592,20 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-01-29T09:03:43+00:00"
+            "time": "2018-04-03T20:34:11+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.4",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "eab73b6c21d27ae4cd037c417618dfd4befb0bfe"
+                "reference": "a42f9da85c7c38d59f5e53f076fe81a091f894d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/eab73b6c21d27ae4cd037c417618dfd4befb0bfe",
-                "reference": "eab73b6c21d27ae4cd037c417618dfd4befb0bfe",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/a42f9da85c7c38d59f5e53f076fe81a091f894d0",
+                "reference": "a42f9da85c7c38d59f5e53f076fe81a091f894d0",
                 "shasum": ""
             },
             "require": {
@@ -3649,7 +3650,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-21T19:05:02+00:00"
+            "time": "2018-04-03T05:14:20+00:00"
         },
         {
             "name": "webmozart/assert",

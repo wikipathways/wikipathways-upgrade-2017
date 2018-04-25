@@ -2,7 +2,7 @@
 
 git submodule init
 git submodule update
-for i in composer.lock vendor composer.local.json LocalSettings.php; do
+for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
 	ln -s ../$i mediawiki
 done
