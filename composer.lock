@@ -568,16 +568,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.8",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b"
+                "reference": "4cbf2db9abcb01486a21b7a059e03a62fae63187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/4b7d64e852886319e93ddfdecff0d744ab87658b",
-                "reference": "4b7d64e852886319e93ddfdecff0d744ab87658b",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4cbf2db9abcb01486a21b7a059e03a62fae63187",
+                "reference": "4cbf2db9abcb01486a21b7a059e03a62fae63187",
                 "shasum": ""
             },
             "require": {
@@ -613,7 +613,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-05-16T08:49:21+00:00"
         },
         {
             "name": "wikimedia/assert",
@@ -1327,12 +1327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML.git",
-                "reference": "4ab900995e52527270a45c06e617b7935c8c3c8f"
+                "reference": "a11c93e54d96adb22dfa7fd4464b78299ff7833d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/4ab900995e52527270a45c06e617b7935c8c3c8f",
-                "reference": "4ab900995e52527270a45c06e617b7935c8c3c8f",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/a11c93e54d96adb22dfa7fd4464b78299ff7833d",
+                "reference": "a11c93e54d96adb22dfa7fd4464b78299ff7833d",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1402,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/issues"
             },
-            "time": "2018-04-23T01:01:20+00:00"
+            "time": "2018-06-04T15:07:04+00:00"
         },
         {
             "name": "wikipathways/gpml-converter",
@@ -1410,12 +1410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git",
-                "reference": "cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2"
+                "reference": "2b7edf3e6ac31681133852dd214a6a7776608ba6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2",
-                "reference": "cda9c07ed7e2bfd78ad0749eeb54901fb51f21c2",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/2b7edf3e6ac31681133852dd214a6a7776608ba6",
+                "reference": "2b7edf3e6ac31681133852dd214a6a7776608ba6",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/tree/feature-mwupgrade",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/issues"
             },
-            "time": "2018-03-01T19:46:06+00:00"
+            "time": "2018-06-04T15:05:25+00:00"
         },
         {
             "name": "wikipathways/wikipathways",
@@ -1493,12 +1493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways.git",
-                "reference": "ba3e21cd09441e041a28b57610bc4a07cb4c5b52"
+                "reference": "f1ffad0f927ee98a58ae7ecccb786a19d266377b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/ba3e21cd09441e041a28b57610bc4a07cb4c5b52",
-                "reference": "ba3e21cd09441e041a28b57610bc4a07cb4c5b52",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/f1ffad0f927ee98a58ae7ecccb786a19d266377b",
+                "reference": "f1ffad0f927ee98a58ae7ecccb786a19d266377b",
                 "shasum": ""
             },
             "require": {
@@ -1542,7 +1542,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/issues"
             },
-            "time": "2018-04-23T13:57:42+00:00"
+            "time": "2018-06-03T16:46:51+00:00"
         },
         {
             "name": "zordius/lightncandy",
@@ -1929,13 +1929,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "07a712def7205d8921e6ff93c9ee12119def463e"
+                "reference": "edbf107492dfa1cc76aa528380371317a4a8bc39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/07a712def7205d8921e6ff93c9ee12119def463e",
-                "reference": "07a712def7205d8921e6ff93c9ee12119def463e",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/edbf107492dfa1cc76aa528380371317a4a8bc39",
+                "reference": "edbf107492dfa1cc76aa528380371317a4a8bc39",
                 "shasum": ""
+            },
+            "require-dev": {
+                "nikic/php-parser": "v4.0.1",
+                "phpdocumentor/reflection-docblock": "^4.3",
+                "phpunit/phpunit": "7.1.4"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -1954,7 +1959,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2018-04-20T16:19:58+00:00"
+            "time": "2018-05-30T15:53:56+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3343,16 +3348,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.8",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf"
+                "reference": "36f83f642443c46f3cf751d4d2ee5d047d757a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
-                "reference": "d4bb70fa24d540c309d88a9d6e43fb2d339b1fbf",
+                "url": "https://api.github.com/repos/symfony/console/zipball/36f83f642443c46f3cf751d4d2ee5d047d757a27",
+                "reference": "36f83f642443c46f3cf751d4d2ee5d047d757a27",
                 "shasum": ""
             },
             "require": {
@@ -3373,7 +3378,7 @@
                 "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
-                "psr/log": "For using the console logger",
+                "psr/log-implementation": "For using the console logger",
                 "symfony/event-dispatcher": "",
                 "symfony/lock": "",
                 "symfony/process": ""
@@ -3408,20 +3413,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-05-16T08:49:21+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.8",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
+                "reference": "b28fd73fefbac341f673f5efd707d539d6a19f68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
-                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/b28fd73fefbac341f673f5efd707d539d6a19f68",
+                "reference": "b28fd73fefbac341f673f5efd707d539d6a19f68",
                 "shasum": ""
             },
             "require": {
@@ -3464,20 +3469,75 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-05-16T14:03:39+00:00"
         },
         {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-04-30T19:57:29+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
                 "shasum": ""
             },
             "require": {
@@ -3489,7 +3549,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -3523,20 +3583,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.8",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "951643091b39a6fd40fce56cd16e21e12bef3feb"
+                "reference": "0e6545672d8c9ce70dd472adc2f8b03155a46f73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/951643091b39a6fd40fce56cd16e21e12bef3feb",
-                "reference": "951643091b39a6fd40fce56cd16e21e12bef3feb",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0e6545672d8c9ce70dd472adc2f8b03155a46f73",
+                "reference": "0e6545672d8c9ce70dd472adc2f8b03155a46f73",
                 "shasum": ""
             },
             "require": {
@@ -3592,24 +3652,25 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-04-03T20:34:11+00:00"
+            "time": "2018-04-26T12:42:15+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.8",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "a42f9da85c7c38d59f5e53f076fe81a091f894d0"
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/a42f9da85c7c38d59f5e53f076fe81a091f894d0",
-                "reference": "a42f9da85c7c38d59f5e53f076fe81a091f894d0",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
                 "symfony/console": "<3.4"
@@ -3650,7 +3711,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:14:20+00:00"
+            "time": "2018-05-03T23:18:14+00:00"
         },
         {
             "name": "webmozart/assert",
