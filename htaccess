@@ -1,12 +1,13 @@
 RewriteEngine On
 
+RewriteRule ^/?skins/common/images/(.*) /extensions/WikiPathways/images/$1 [L]
+RewriteRule ^/?wpi/(.*) /extensions/WikiPathways/$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?(.*)$ /index.php?title=$1 [L,QSA]
 
 # Set headers
 Header set Referrer-Policy: unsafe-url
-
-RewriteRule ^/?wpi/ /extensions/WikiPathways/
 
 SetEnv MW_INSTALL_PATH /home/wikipathways.org/mediawiki

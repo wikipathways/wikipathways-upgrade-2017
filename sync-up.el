@@ -7,12 +7,7 @@
 
 ;;; Code:
 
-(when (not (fboundp 'package-installed-p))
-  (package-initialize))
-(when (not (package-installed-p 'auto-shell-command))
-  (package-install 'auto-shell-command))
-
-(require 'auto-shell-command)
+(use-package auto-shell-command)
 (let ((this-dir (file-name-directory (buffer-file-name))))
   (ascmd:add
    (list this-dir
