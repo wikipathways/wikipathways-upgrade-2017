@@ -4,19 +4,19 @@
 2) Instances of ~wikipathways.username~ should be replaced with a "proper" mwjs fetching of the user name.  You can use ~mw.config.get("wgUserName")~.
 3) Modify [[https://wikipathways.org/index.php/MediaWiki:Common.js][MediaWiki:Common.js]] so that it executes after things are loaded.
 	- Surround everything with
-		#+BEGIN_SRC javascript
-				mw.loader.using( ['mediawiki.user'] ).done( function() {
-				… // everything in MediaWiki:Common.js right now
-				} );
-		#+END_SRC
+	#+BEGIN_SRC javascript
+		mw.loader.using( ['mediawiki.user'] ).done( function() {
+		… // everything in MediaWiki:Common.js right now
+		} );
+	#+END_SRC
 	- Change ~addOnloadHook()~ to ~$(document.ready(…))~.  See [[https://www.mediawiki.org/wiki/ResourceLoader/Migration_guide_(users)#Legacy_removals][Legacy removals]] for more information.  For example, change
-		#+BEGIN_SRC javascript
-				addOnloadHook(CustomizeModificationsOfSidebar);
-		#+END_SRC
+	#+BEGIN_SRC javascript
+		addOnloadHook(CustomizeModificationsOfSidebar);
+	#+END_SRC
 		to
-		#+BEGIN_SRC javascript
-				$(document.ready( function() { CustomizeModificationsOfSidebar(); } );
-		#+END_SRC
+	#+BEGIN_SRC javascript
+		$(document.ready( function() { CustomizeModificationsOfSidebar(); } );
+	#+END_SRC
 
 * Code Layout
 ** Git submodules
