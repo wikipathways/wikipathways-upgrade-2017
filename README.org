@@ -13,7 +13,7 @@
 	#+BEGIN_SRC javascript
 		addOnloadHook(CustomizeModificationsOfSidebar);
 	#+END_SRC
-		to
+			to
 	#+BEGIN_SRC javascript
 		$(document.ready( function() { CustomizeModificationsOfSidebar(); } );
 	#+END_SRC
@@ -96,7 +96,7 @@ Since I like to have a concrete target when I write, I'll document how I'm solvi
 12) We visit the page again without =?debug=true= and [[https://www.mediawiki.org/wiki/Manual:Purge][purge the cache]]. The problem re-appears
 	
 	At this point, we conclude that we found a bug in MediaWiki's handling of javascript files.
-13) 
+13) For this, we'll ask for help.  /This section tbd./
 
 * Other Documents
 - [[./docs/ConvertingToResourceLoader.org][Converting AuthorInfo to ResourceLoader]]
