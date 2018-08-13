@@ -298,80 +298,53 @@ function addTag(concept, conceptId)
 
 function fetchTags()
 {
-	var rand = Math.random();
-	var tags = new Array();
-	
-/*
-	var handleFailure = function(o){
-		alert("Sorry the tags cannot be fetched! Please try again!");
-	};
+var rand = Math.random();
+var tags = new Array();
 
-	var callback =
-		{
-			success:handleSuccess,
-			failure:handleFailure,
-			argument:['foo','bar']
-		};*/
+callback = function(xhr) {	
 
-	//var postData = 'action=fetch' + '&title=' + wgTitle +'&rand=' + rand  ;
-	//var request = $.post(opath+"/otags.php", postData, callback);
-	//$.ajax( mw.util.wikiScript() + '?' + $.param( { action: 'ajax', rs: 'WikiPathways\\Ontology\\Edit::getOntologyTags', rsargs: ["WP2583"]} ), { complete: function(xhr) { console.log(xhr.responseJSON.Resultset);}, dataType: "json" } );
-	callback = function(xhr) {	
-		
-			var result = xhr.responseJSON;
-			console.log(xhr);
-			console.log(xhr.responseJSON);
-			if(xhr.responseJSON != "ERROR"){
+		var result = xhr.responseJSON;
+		console.log(xhr);
+		console.log(xhr.responseJSON);
+		if(xhr.responseJSON != "ERROR"){
 
-				var tagsJSON = xhr.responseJSON;
-				var totalTagsCount = 0;
-				if(xhr.responseJSON != "[]")
+			var tagsJSON = xhr.responseJSON;
+			var totalTagsCount = 0;
+			if(xhr.responseJSON != "[]")
+			{
+				var tags = tagsJSON.Resultset;
+				for(i=0;i<tags.length;i++)
 				{
-					var tags = tagsJSON.Resultset;
-					for(i=0;i<tags.length;i++)
-					{
-						var ontologyName = tags[i].ontology[0];
-						var concept = tags[i].term[0];
-						var conceptId = tags[i].term_id[0];
-						document.getElementById(ontologyName).innerHTML += " <a  class='ontologyTag' href='javascript:displayTag(\"" + escape(concept) + "\",\"" + conceptId + "\");' id=\"" + conceptId + "\">" + concept + "</a> ";
-						oTagsCount[ontologyName]++;
-						totalTagsCount++;
-					}
+					var ontologyName = tags[i].ontology[0];
+					var concept = tags[i].term[0];
+					var conceptId = tags[i].term_id[0];
+					document.getElementById(ontologyName).innerHTML += " <a  class='ontologyTag' href='javascript:displayTag(\"" + escape(concept) + "\",\"" + conceptId + "\");' id=\"" + conceptId + "\">" + concept + "</a> ";
+					oTagsCount[ontologyName]++;
+					totalTagsCount++;
 				}
-	
-				toggleOntologyDisplay();
-	
-				if(totalTagsCount < 3 && otagloggedIn == 1)
-					toggleOntologyControls();
-	
-				if(totalTagsCount == 0)
-					document.getElementById('ontologyMessage').style.display = "block";
-				else
-					document.getElementById('ontologyTags').style.display = "block";
 			}
-			
-	
-	}
-	$.ajax( 
-		mw.util.wikiScript() + '?' + $.param( { 
-		action: 'ajax', rs: 'WikiPathways\\OntologyTags\\OntologyTagsFunctions::getOntologyTags', 
-		rsargs: [wgTitle]} ), 
-		{ 
-		complete: callback, 
-			dataType: "json" 
-		});
 
-		
-	/*var request = $.post(opath+"/otags.php", postData,function(data,status){
-		$("#biopaxontotags").html(data);
-		alert(status);
-		sss(data);
-	});*/
-	//    makeRequest("Deleted tag : " + tags[index][0] + " (" + ontology_name + ")");
-	/*var hel = $.get(opath+"otags.php",postData,function(data,status){
-		$("#biopaxontotags").html(data);
-		alert(status);
-	});*/
+			toggleOntologyDisplay();
+
+			if(totalTagsCount < 3 && otagloggedIn == 1)
+				toggleOntologyControls();
+
+			if(totalTagsCount == 0)
+				document.getElementById('ontologyMessage').style.display = "block";
+			else
+				document.getElementById('ontologyTags').style.display = "block";
+		}
+
+
+}
+$.ajax( 
+	mw.util.wikiScript() + '?' + $.param( { 
+	action: 'ajax', rs: 'WikiPathways\\OntologyTags\\OntologyTagsFunctions::getOntologyTags', 
+	rsargs: [wgTitle]} ), 
+	{ 
+	complete: callback, 
+		dataType: "json" 
+	});
 }
 
 function displayTag(concept, conceptId, newTag)
