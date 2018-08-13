@@ -1,0 +1,55 @@
+{
+	"name": "wikipathways/OntologyTags",
+	"extra": {
+		"installer-name": "OntologyTags"
+	},
+	"license": "Apache-2.0",
+	"type": "mediawiki-extension",
+	"description": "Handle GPML for WikiPathways.",
+	"keywords": [
+		"extension",
+		"wiki",
+		"mediawiki",
+		"convert"
+	],
+	"authors": [
+		{
+			"name": "Dara Akdag",
+			"email": "dakdag92@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"autoload" : {
+		"psr-4": {
+			"WikiPathways\\OntologyTags\\Tests\\" : "tests/phpunit",
+			"WikiPathways\\OntologyTags\\Maintenance\\" : "maintenance",
+			"WikiPathways\\OntologyTags\\" : "src"
+		}
+	},
+	"require": {
+		"ext-json": "*",
+		"ext-xml": "*",
+		"php": ">=5.3.0",
+		"composer/installers": "1.*,>=1.0.1"
+	},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "0.9.2",
+		"jakub-onderka/php-console-highlighter": "0.3.2",
+		"mediawiki/mediawiki-codesniffer": "14.1.0",
+		"phpunit/phpunit": "4.8.36",
+		"phpmd/phpmd": "~2.1"
+	},
+	"scripts": {
+		"phpunit": "php $MW_INSTALL_PATH/tests/phpunit/phpunit.php -c .phpunit.xml.dist",
+		"phpdbg": "phpdbg -qrr $MW_INSTALL_PATH/tests/phpunit/phpunit.php -c .phpunit.xml.dist",
+		"check": [
+			"parallel-lint . --exclude vendor --exclude node_modules",
+			"phpmd src text .phpmd.xml || :",
+			"phpcs -p -s src"
+		],
+		"fix": [
+			"phpcbf src"
+		]
+	}
+  
+}

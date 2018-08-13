@@ -1,0 +1,51 @@
+{
+	"name": "OntologyTags",
+	"version": "0.1.0",
+	"author": [
+		"bawiz"
+	],
+	"url": "https://www.wikipathways.org",
+	"descriptionmsg": "ontologytags-desc",
+	"license-name": "GPL v2",
+	"type": "api",
+	"AutoloadClasses": {
+		"WikiPathways\\OntologyTags\\OntologyTagsFunctions": "src/OntologyTagsFunctions.php",
+		"WikiPathways\\OntologyTags\\Cache": "src/Cache.php",
+		"WikiPathways\\OntologyTags\\Hook": "src/Hook.php",
+		"WikiPathways\\OntologyTags\\OntologyTagsDisplays": "src/OntologyTagsDisplays.php"
+	},
+	"config": {
+		"prefix": "wpi",
+		"DisableValidation": true
+	},
+	"callback": "WikiPathways\\OntologyTags\\Hook::onRegistration",
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"WikiPathways\\ontologyTags\\Hook::onParserFirstCallInit"
+		],
+		"ParserAfterTidy": [
+			"WikiPathways\\OntologyTags\\OntologyTagsDisplays::onHeader"
+		]
+	},
+	"MessagesDirs": {
+			"WikiPathways\\OntologyTags": "i18n/en.json"
+	},
+	"ResourceModules": {
+		"wpi.OntologyTags": {
+			"position": "top",
+			"scripts": [
+				"script.js"
+			],
+			"styles": [
+				"otag.css"
+			],
+			"dependencies": "mediawiki.util"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "OntologyTags/modules"
+	},
+
+	"manifest_version": 1
+}
