@@ -127,6 +127,3 @@
 [submodule "extensions/WikiPathways"]
 	path = extensions/WikiPathways
 	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways.git
-[submodule "mediawiki-extensions-WikiPathways-OntologyTags"]
-	path = mediawiki-extensions-WikiPathways-OntologyTags
-	url = https://github.com/wikipathways/mediawiki-extensions-WikiPathways-OntologyTags
