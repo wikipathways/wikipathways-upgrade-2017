@@ -117,7 +117,7 @@
 	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-GPML.git
 [submodule "extensions/OntologyTags"]
 	path = extensions/OntologyTags
-	url = https://github.com/wikipathways/mediawiki-extensions-WikiPathways-OntologyTags
+	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-OntologyTags.git
 [submodule "extensions/IFrame"]
 	path = extensions/IFrame
 	url = https://github.com/hexmode/mediawiki-iframe.git
