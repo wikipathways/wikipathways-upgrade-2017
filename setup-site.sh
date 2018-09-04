@@ -27,9 +27,6 @@ is_installed python-pygments
 is_installed npm
 is_installed jq
 
-# Proper way to set up a symlink in Debian
-sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
-
 if [ -n "$to_install" ]; then
 	echo Installing: $to_install
 	sudo apt install $to_install
@@ -45,4 +42,9 @@ stdir=`stat -c %a mediawiki/images`
 if [ $stdir -ne 1777 ]; then
 	echo need to make images writable
 	sudo chmod 1777 $dir
+fi
+
+# Proper way to set up a symlink in Debian
+if [ -x /usr/bin/nodejs ]; then
+    sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
 fi
