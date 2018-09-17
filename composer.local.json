@@ -36,6 +36,14 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git"
 		}
 	]
 }
