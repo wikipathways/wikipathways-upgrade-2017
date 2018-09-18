@@ -12,6 +12,9 @@ for i in extensions/* skins/*; do
 	ln -s ../../$i mediawiki/$i
 done
 
+rm -f mediawiki/.htaccess
+ln -s htaccess mediawiki/.htaccess
+
 to_install=""
 is_installed() {
 	dpkg -l $1 > /dev/null  2>&1
