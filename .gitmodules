@@ -86,10 +86,10 @@
 	path = extensions/CiteThisPage
 	url = https://github.com/wikimedia/mediawiki-extensions-CiteThisPage
 	branch = REL1_29
-[submodule "vendor"]
-	path = vendor
-	url = https://github.com/wikipathways/mediawiki-vendor.git
-	branch = REL1_29
+#[submodule "vendor"]
+#	path = vendor
+#	url = https://github.com/wikipathways/mediawiki-vendor.git
+#	branch = REL1_29
 [submodule "mediawiki"]
 	path = mediawiki
 	url = https://github.com/wikimedia/mediawiki.git
@@ -106,9 +106,9 @@
 	path = extensions/TitleBlacklist
 	url = https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist
 	branch = REL1_29
-[submodule "extensions/UserLoginLog"]
-	path = extensions/UserLoginLog
-	url = https://github.com/mwstake/mediawiki-extensions-UserLoginLog.git
+#[submodule "extensions/UserLoginLog"]
+#	path = extensions/UserLoginLog
+#	url = https://github.com/mwstake/mediawiki-extensions-UserLoginLog.git
 [submodule "extensions/CodeEditor"]
 	path = extensions/CodeEditor
 	url = https://github.com/wikimedia/mediawiki-extensions-CodeEditor
@@ -124,6 +124,6 @@
 [submodule "extensions/GPMLConverter"]
 	path = extensions/GPMLConverter
 	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git
-[submodule "extensions/WikiPathways"]
-	path = extensions/WikiPathways
-	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways.git
+#[submodule "extensions/WikiPathways"]
+#	path = extensions/WikiPathways
+#	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways.git
