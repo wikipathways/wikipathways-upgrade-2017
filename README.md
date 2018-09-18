@@ -12,7 +12,9 @@
 	```javascript
 		addOnloadHook(CustomizeModificationsOfSidebar);
 	```
-			to
+	
+	to
+
 	```javascript
 		$(document.ready( function() { CustomizeModificationsOfSidebar(); } );
 	```
