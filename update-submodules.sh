@@ -1,12 +1,14 @@
 #!/bin/sh -e
 
-git submodule init
+mediawiki_dir="mediawiki"
+if [ -d "$mediawiki_dir" ]; then
+	cd "$mediawiki_dir"
+	git checkout .
+	cd ..
+fi
 
-cd mediawiki
-git checkout .
-cd ..
+git submodule sync && git submodule update --init --recursive
 
-git submodule update
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
 	ln -s ../$i mediawiki
