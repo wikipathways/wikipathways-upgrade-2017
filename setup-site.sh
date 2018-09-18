@@ -48,3 +48,5 @@ fi
 if [ -x /usr/bin/nodejs ]; then
     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
 fi
+
+cp ./git-hooks/* .git/hooks/
