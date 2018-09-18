@@ -55,25 +55,16 @@ fi
 ###############################################################################
 # Functions
 ###############################################################################
-function pull {
-        echo "------------------------------------------------------------------------"
-  for REPO in "${REPOSITORIES[@]}"; do
-    pushd $REPO > /dev/null
-    echo "Downloading changes from upstream: $REPO"
-    git pull
-    popd > /dev/null
-                echo "------------------------------------------------------------------------"
-  done
-}
-
-function push {
-  echo "- Sending all local commits to upstream..."
-  for REPO in "${REPOSITORIES[@]}"; do
-    pushd $REPO
-    git push -u origin
-    popd
-  done
-}
+#function pull {
+#        echo "------------------------------------------------------------------------"
+#  for REPO in "${REPOSITORIES[@]}"; do
+#    pushd $REPO > /dev/null
+#    echo "Downloading changes from upstream: $REPO"
+#    git pull
+#    popd > /dev/null
+#                echo "------------------------------------------------------------------------"
+#  done
+#}
 
 function status {
         echo "------------------------------------------------------------------------"
@@ -96,8 +87,7 @@ function status {
 START_DIR=$(pwd)
 
 case $COMMAND in
-  push )    push ;;
-  pull )    pull ;;
+  #pull )    pull ;;
   status )  status ;;
 
   * )      echo "Invalid command $COMMAND: $ERROR_MESSAGE"
