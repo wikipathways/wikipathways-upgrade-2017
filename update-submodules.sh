@@ -1,13 +1,18 @@
 #!/bin/sh -e
 
+# TODO should we use separate git submodule init and update or instead
+#      use the single commented out line below the update line?
+git submodule init
+
 mediawiki_dir="mediawiki"
-if [ -d "$mediawiki_dir" ]; then
+if [ -d "$mediawiki_dir" ] && [ -d "$mediawiki_dir/.git" ]; then
 	cd "$mediawiki_dir"
 	git checkout .
 	cd ..
 fi
 
-git submodule sync && git submodule update --init --recursive
+git submodule update
+#git submodule sync && git submodule update --init --recursive
 
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
