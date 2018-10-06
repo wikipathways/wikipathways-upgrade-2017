@@ -26,61 +26,13 @@
 	path = extensions/ContributionScores
 	url = https://github.com/wikimedia/mediawiki-extensions-ContributionScores
 	branch = REL1_29
-[submodule "extensions/ConfirmEdit"]
-	path = extensions/ConfirmEdit
-	url = https://github.com/wikimedia/mediawiki-extensions-ConfirmEdit
-	branch = REL1_29
-[submodule "extensions/Gadgets"]
-	path = extensions/Gadgets
-	url = https://github.com/wikimedia/mediawiki-extensions-Gadgets
-	branch = REL1_29
-[submodule "extensions/Nuke"]
-	path = extensions/Nuke
-	url = https://github.com/wikimedia/mediawiki-extensions-Nuke
-	branch = REL1_29
-[submodule "extensions/ParserFunctions"]
-	path = extensions/ParserFunctions
-	url = https://github.com/wikimedia/mediawiki-extensions-ParserFunctions
-	branch = REL1_29
-[submodule "extensions/Renameuser"]
-	path = extensions/Renameuser
-	url = https://github.com/wikimedia/mediawiki-extensions-Renameuser
-	branch = REL1_29
 [submodule "extensions/Vector"]
 	path = extensions/Vector
 	url = https://github.com/wikimedia/mediawiki-extensions-Vector
 	branch = REL1_29
-[submodule "extensions/WikiEditor"]
-	path = extensions/WikiEditor
-	url = https://github.com/wikimedia/mediawiki-extensions-WikiEditor
-	branch = REL1_29
-[submodule "extensions/Cite"]
-	path = extensions/Cite
-	url = https://github.com/wikimedia/mediawiki-extensions-Cite
-	branch = REL1_29
 [submodule "extensions/Scribunto"]
 	path = extensions/Scribunto
 	url = https://github.com/wikimedia/mediawiki-extensions-Scribunto
-	branch = REL1_29
-[submodule "extensions/ImageMap"]
-	path = extensions/ImageMap
-	url = https://github.com/wikimedia/mediawiki-extensions-ImageMap
-	branch = REL1_29
-[submodule "extensions/InputBox"]
-	path = extensions/InputBox
-	url = https://github.com/wikimedia/mediawiki-extensions-InputBox
-	branch = REL1_29
-[submodule "extensions/Interwiki"]
-	path = extensions/Interwiki
-	url = https://github.com/wikimedia/mediawiki-extensions-Interwiki
-	branch = REL1_29
-[submodule "extensions/SyntaxHighlight_GeSHi"]
-	path = extensions/SyntaxHighlight_GeSHi
-	url = https://github.com/wikimedia/mediawiki-extensions-SyntaxHighlight_GeSHi
-	branch = REL1_29
-[submodule "skins/Vector"]
-	path = skins/Vector
-	url = https://github.com/wikimedia/mediawiki-extensions-Vector
 	branch = REL1_29
 [submodule "extensions/CiteThisPage"]
 	path = extensions/CiteThisPage
@@ -97,10 +49,6 @@
 [submodule "extensions/BiblioPlus"]
 	path = extensions/BiblioPlus
 	url = https://github.com/wikimedia/mediawiki-extensions-BiblioPlus
-	branch = REL1_29
-[submodule "extensions/TitleBlacklist"]
-	path = extensions/TitleBlacklist
-	url = https://github.com/wikimedia/mediawiki-extensions-TitleBlacklist
 	branch = REL1_29
 [submodule "extensions/UserLoginLog"]
 	path = extensions/UserLoginLog

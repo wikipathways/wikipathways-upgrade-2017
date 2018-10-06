@@ -8,8 +8,10 @@ for i in composer.lock vendor composer.local.json LocalSettings.php package-lock
 done
 
 for i in extensions/* skins/*; do
-	rm -rf mediawiki/$i
+    if [ ! -d mediawiki/$i ]; then
+        rm -rf mediawiki/$i
 	ln -s ../../$i mediawiki/$i
+    fi
 done
 
 rm -f mediawiki/.htaccess
