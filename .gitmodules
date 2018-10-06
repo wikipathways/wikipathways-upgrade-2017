@@ -16,7 +16,7 @@
 	branch = REL1_29
 [submodule "extensions/UserSnoop"]
 	path = extensions/UserSnoop
-	url = https://github.com/wikimedia/mediawiki-extensions-UserSnoop
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/UserSnoop
 	branch = REL1_29
 [submodule "extensions/UserMerge"]
 	path = extensions/UserMerge
