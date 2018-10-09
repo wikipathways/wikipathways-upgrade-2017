@@ -12,7 +12,7 @@ fi
 git submodule update --init --recursive
 
 rm -f "$mediawiki_dir/.htaccess"
-ln -s htaccess "$mediawiki_dir/.htaccess"
+ln -s ../htaccess "$mediawiki_dir/.htaccess"
 
 for i in composer.lock composer.local.json LocalSettings.php package-lock.json vendor; do
 	rm -rf "$mediawiki_dir/$i"
