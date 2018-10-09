@@ -1,8 +1,6 @@
 #!/bin/sh -e
 
-# TODO should we use separate git submodule init and update or instead
-#      use the single commented out line below the update line?
-git submodule init
+echo 'Running a git hook...'
 
 mediawiki_dir="mediawiki"
 if [ -d "$mediawiki_dir" ] && [ -d "$mediawiki_dir/.git" ]; then
@@ -11,20 +9,22 @@ if [ -d "$mediawiki_dir" ] && [ -d "$mediawiki_dir/.git" ]; then
 	cd ..
 fi
 
-git submodule update
-#git submodule sync && git submodule update --init --recursive
+git submodule update --init --recursive
 
-for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
-	rm -rf mediawiki/$i
-	ln -s ../$i mediawiki
+rm -f "$mediawiki_dir/.htaccess"
+ln -s htaccess "$mediawiki_dir/.htaccess"
+
+for i in composer.lock composer.local.json LocalSettings.php package-lock.json vendor; do
+	rm -rf "$mediawiki_dir/$i"
+	ln -s ../$i "$mediawiki_dir"
 done
 
 for i in extensions/* skins/*; do
-	rm -rf mediawiki/$i
-	ln -s ../../$i mediawiki/$i
+	rm -rf "$mediawiki_dir/$i"
+	ln -s ../../$i "$mediawiki_dir/$i"
 done
 
-dir=mediawiki/images
+dir="$mediawiki_dir/images"
 stdir=`stat -c %a mediawiki/images`
 if [ $stdir -ne 1777 ]; then
 	echo need to make images writable
