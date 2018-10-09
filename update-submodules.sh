@@ -27,6 +27,6 @@ done
 dir="$mediawiki_dir/images"
 stdir=`stat -c %a mediawiki/images`
 if [ $stdir -ne 1777 ]; then
-	echo need to make images writable
+	echo 'Making images writable...'
 	sudo chmod 1777 $dir
 fi
