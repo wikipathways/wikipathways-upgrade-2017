@@ -68,14 +68,14 @@ fi
 
 sudo apt-get autoremove -y
 
-#cat > "./.git/hooks/post-checkout" <<EOF
-##!/usr/bin/env bash
-#./update-submodules.sh
-#EOF
-#sudo chmod ug+x "./.git/hooks/post-checkout"
+cat > "./.git/hooks/post-checkout" <<EOF
+#!/usr/bin/env bash
+./update-submodules.sh
+EOF
+sudo chmod ug+x "./.git/hooks/post-checkout"
 
-#cat > "./.git/hooks/post-rewrite" <<EOF
-##!/usr/bin/env bash
-#./update-submodules.sh
-#EOF
-#sudo chmod ug+x "./.git/hooks/post-rewrite"
+cat > "./.git/hooks/post-rewrite" <<EOF
+#!/usr/bin/env bash
+./update-submodules.sh
+EOF
+sudo chmod ug+x "./.git/hooks/post-rewrite"
