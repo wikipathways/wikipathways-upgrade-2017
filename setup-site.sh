@@ -1,7 +1,15 @@
 #!/bin/sh -e
 
-git submodule init
-git submodule update
+(
+    export PWD=`pwd`;
+    cd conf;
+    find . -type f | xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}"
+)
+
+sudo a2ensite wikipathways.conf
+sudo systemctl reload apache2
+
+git submodule update --init --recursive
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
 	ln -s ../$i mediawiki
@@ -10,7 +18,7 @@ done
 for i in extensions/* skins/*; do
     if [ ! -d mediawiki/$i ]; then
         rm -rf mediawiki/$i
-	ln -s ../../$i mediawiki/$i
+	ln -s ../$i mediawiki/$i
     fi
 done
 
@@ -28,8 +36,9 @@ is_installed() {
 is_installed php-mbstring
 is_installed php-mysql
 is_installed php-xml
+is_installed php-zip
+is_installed composer
 is_installed python-pygments
-is_installed npm
 is_installed jq
 
 if [ -n "$to_install" ]; then
@@ -42,6 +51,9 @@ if [ ! -L /etc/apache2/mods-enabled/headers.load ]; then
 	sudo a2enmod headers
 fi
 
+wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 dir=mediawiki/images
 stdir=`stat -c %a mediawiki/images`
 if [ $stdir -ne 1777 ]; then
@@ -53,6 +65,8 @@ fi
 if [ -x /usr/bin/nodejs ]; then
     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
 fi
+
+sudo apt-get autoremove -y
 
 #cat > "./.git/hooks/post-checkout" <<EOF
 ##!/usr/bin/env bash

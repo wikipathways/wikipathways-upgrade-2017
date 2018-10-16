@@ -1,0 +1,80 @@
+#+title: Setting up a development server
+
+These directions assume that you are familiar enough with virtualization software such as [[https://www.virtualbox.org/wiki/Downloads][VirtualBox]] to set up a virtual machine which is network accessible from the host machine.  You will need to be able to ssh into the machine.
+
+* Use the ISO to install a pre-configured Ubuntu server
+
+You can download the CD image from http://vm1.wikipathways.org/ubuntu-18.04-netboot-amd64-unattended.iso (The CD is created using [[https://github.com/wikipathways/linux-unattended-installation][this repository]]
+
+Set up a virtual machine with a 20G or more disk and boot from the ISO.  The installation and set up should take about an hour to create a development environment without any interaction.
+
+Boot the machine without the ISO and log in as =root= with the password =wikiwiki=.  At the shell prompt, create a user for yourself and put your user in the =sudo= group.  For example, Anders might do the following:
+#+BEGIN_SRC sh
+# adduser --gecos "Anders Riutta" ariutta
+Adding user `ariutta' ...
+Adding new group `ariutta' (1000) ...
+Adding new user `ariutta' (1000) with group `ariutta' ...
+Creating home directory `/home/ariutta' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+# adduser ariutta sudo
+Adding user `ariutta' to group `sudo' ...
+Adding user ariutta to group sudo
+Done.
+#
+#+END_SRC
+
+While you are still logged in as root, get your the virtual machine's (VM's) IP address:
+
+#+BEGIN_SRC sh
+# ip -o -4 a
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+2: ens3    inet 10.5.5.142/24 brd 10.5.5.255 scope global dynamic ens3\       valid_lft 3196sec preferred_lft 3196sec
+#+END_SRC
+
+In the above output you can see that the non-localhost address is 10.5.5.142.
+
+Using this ip address and the user you set up, log into the VM with ssh:
+
+#+BEGIN_SRC sh
+$ ssh -l USER 10.5.5.142
+The authenticity of host '10.5.5.142 (10.5.5.142)' can't be established.
+ECDSA key fingerprint is SHA256:rkXM1pVj0zPQwAHIiLOleWorgoN/V+qKM2GfnGsgpFs.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '10.5.5.142' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+USER@wikipathways-dev:~$
+#+END_SRC
+
+At this point, you may want to copy in your =~/.gitconfig= file so you don't have to configure your name and email for git on the VM.
+
+Clone the [[https://github.com/wikipathways/wikipathways-upgrade-2017][wikipathways/wikipathways-upgrade-2017]] repository from github.  I suggest creating =/home/wikipathways.org= and cloning into that path for this since the top level checkout is /not/ the webserver's document root:
+#+BEGIN_SRC sh
+USER@wikipathways-dev:~$ sudo mkdir /home/wikipathway.org; sudo chown USER /home/wikipathways.org
+USER@wikipathways-dev:~$ cd /home/wikipathway.org; git clone git@github.com:wikipathways/wikipathways-upgrade-2017 .
+#+END_SRC
+
+Once that is done, run setup-site.sh
+#+BEGIN_SRC sh
+USER@wikipathways-dev:~$ sh setup-site.sh
+Enabling site wikipathways.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+…
+#+END_SRC
+
+Finally, create the database specified in =conf/apache2/envvars=:
+#+BEGIN_SRC sh
+$ . conf/apache2/envvars
+$ sudo mysqladmin create $WP_DBNAME
+$ sudo mysql $WP_DBNAME < wikipathways.sql
+$ echo "grant all on $WP_DBNAME.* to $WP_DBNAME@localhost identified by '$WP_DBPASS';" | sudo mysql
+#+END_SRC
