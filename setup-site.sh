@@ -1,5 +1,14 @@
 #!/bin/sh -e
 
+(
+    export PWD=`pwd`;
+    cd conf;
+    find . -type f | xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}"
+)
+
+sudo a2ensite wikipathways.conf
+sudo systemctl reload apache2
+
 git submodule update --init --recursive
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
@@ -9,7 +18,7 @@ done
 for i in extensions/* skins/*; do
     if [ ! -d mediawiki/$i ]; then
         rm -rf mediawiki/$i
-	ln -s ../../$i mediawiki/$i
+	ln -s ../$i mediawiki/$i
     fi
 done
 
