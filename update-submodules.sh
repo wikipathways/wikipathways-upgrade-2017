@@ -33,7 +33,7 @@ done
 for i in extensions/* skins/*; do
     if [ ! -d mediawiki/$i ]; then
         rm -rf mediawiki/$i
-	ln -s ../$i mediawiki/$i
+	ln -s ../../$i mediawiki/$i
     fi
 done
 
