@@ -7,8 +7,6 @@ if [ ! -d "$mediawiki_dir" ] && [ ! -f "$mediawiki_dir/.git" ]; then
 	exit 1
 fi
 
-cd "$mediawiki_dir"
-
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf "$mediawiki_dir/$i"
 done
@@ -18,6 +16,8 @@ for i in extensions/* skins/*; do
         rm -rf "$mediawiki_dir/$i"
     fi
 done
+
+cd "$mediawiki_dir"
 
 rm -f .htaccess
 rm -f images/wikipathways
