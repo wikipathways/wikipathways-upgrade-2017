@@ -20,8 +20,7 @@ done
 cd "$mediawiki_dir"
 
 rm -f .htaccess
-rm -f images/wikipathways
-rm -f images/wpi
+sudo rm -rf images
 
 
 rm -rf extensions
