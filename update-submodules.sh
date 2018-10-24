@@ -6,6 +6,11 @@ bash ./revert-mediawiki.sh
 
 git submodule sync && git submodule update --init --recursive
 
+# TODO: should this be enabled?
+cd "$mediawiki_dir"
+composer update
+cd ..
+
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
 	rm -rf mediawiki/$i
 	ln -s ../$i mediawiki
@@ -21,14 +26,11 @@ done
 rm -f mediawiki/.htaccess
 ln -s ../htaccess mediawiki/.htaccess
 
-rm -f mediawiki/images/wikipathways
-ln -s ../images/wikipathways mediawiki/images/wikipathways
+rm -rf mediawiki/images
+ln -s ../images mediawiki/images
 
-rm -f mediawiki/images/wpi
-ln -s ../images/wpi mediawiki/images/wpi
-
-dir=mediawiki/images
-stdir=`stat -c %a mediawiki/images`
+dir=./images
+stdir=`stat -c %a $dir`
 if [ $stdir -ne 1777 ]; then
 	#echo 'making images writable...'
 	sudo chmod 1777 $dir

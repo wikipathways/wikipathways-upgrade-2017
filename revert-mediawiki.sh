@@ -3,7 +3,7 @@
 mediawiki_dir="mediawiki"
 
 if [ ! -d "$mediawiki_dir" ] && [ ! -f "$mediawiki_dir/.git" ]; then
-	echo "$mediawiki directory does not exist or is missing .git"
+	echo "Missing direcgtory $mediawiki or $mediawiki/.git"
 	exit 1
 fi
 
@@ -11,19 +11,11 @@ for i in composer.lock vendor composer.local.json LocalSettings.php package-lock
 	rm -rf "$mediawiki_dir/$i"
 done
 
-for i in extensions/* skins/*; do
-    if [ ! -d "$mediawiki_dir/$i" ]; then
-        rm -rf "$mediawiki_dir/$i"
-    fi
-done
-
 cd "$mediawiki_dir"
 
 rm -f .htaccess
-rm -f images/wikipathways
-rm -f images/wpi
 
-
+rm -rf images
 rm -rf extensions
 rm -rf skins
 
