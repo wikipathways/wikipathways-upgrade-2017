@@ -3,7 +3,7 @@
 mediawiki_dir="mediawiki"
 
 if [ ! -d "$mediawiki_dir" ] && [ ! -f "$mediawiki_dir/.git" ]; then
-	echo "Missing direcgtory $mediawiki or $mediawiki/.git"
+	echo "Missing directory $mediawiki or $mediawiki/.git"
 	exit 1
 fi
 
