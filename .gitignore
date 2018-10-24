@@ -5,4 +5,4 @@ pass.php
 PHPTAGS.sqlite
 tmp
 images/
-conf/
+conf/apache2/envvars.private

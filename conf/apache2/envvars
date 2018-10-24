@@ -1,0 +1,99 @@
+# -*- sh -*-
+# envvars - default environment variables for apache2ctl
+
+# this won't be correct after changing uid
+unset HOME
+
+# for supporting multiple apache2 instances
+if [ "${APACHE_CONFDIR##/etc/apache2-}" != "${APACHE_CONFDIR}" ] ; then
+	SUFFIX="-${APACHE_CONFDIR##/etc/apache2-}"
+else
+	SUFFIX=
+fi
+
+# Since there is no sane way to get the parsed apache2 config in scripts, some
+# settings are defined via environment variables and then used in apache2ctl,
+# /etc/init.d/apache2, /etc/logrotate.d/apache2, etc.
+export APACHE_RUN_USER=www-data
+export APACHE_RUN_GROUP=www-data
+# temporary state file location. This might be changed to /run in Wheezy+1
+export APACHE_PID_FILE=/var/run/apache2$SUFFIX/apache2.pid
+export APACHE_RUN_DIR=/var/run/apache2$SUFFIX
+export APACHE_LOCK_DIR=/var/lock/apache2$SUFFIX
+# Only /var/log/apache2 is handled by /etc/logrotate.d/apache2.
+export APACHE_LOG_DIR=/var/log/apache2$SUFFIX
+
+## The locale used by some modules like mod_dav
+export LANG=C
+## Uncomment the following line to use the system default locale instead:
+#. /etc/default/locale
+
+export LANG
+
+## The command to get the status for 'apache2ctl status'.
+## Some packages providing 'www-browser' need '--dump' instead of '-dump'.
+#export APACHE_LYNX='www-browser -dump'
+
+## If you need a higher file descriptor limit, uncomment and adjust the
+## following line (default is 8192):
+#APACHE_ULIMIT_MAX_FILES='ulimit -n 65536'
+
+## If you would like to pass arguments to the web server, add them below
+## to the APACHE_ARGUMENTS environment.
+#export APACHE_ARGUMENTS=''
+
+## Enable the debug mode for maintainer scripts.
+## This will produce a verbose output on package installations of web server modules and web application
+## installations which interact with Apache
+#export APACHE2_MAINTSCRIPT_DEBUG=1
+
+CURRENT_ENVVARS_PATH="$(readlink -f /etc/apache2/envvars)"
+CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
+if [ -e "$CURRENT_ENVVARS_DIR/envvars.private" ]; then
+  . "$CURRENT_ENVVARS_DIR/envvars.private"
+else
+  echo "We need to set private Apache2 environment variables"
+
+  echo -n "Enter path to WP directory, e.g., /home/wikipathways.org, and press [ENTER]: "
+  read wp_dir_input
+  export WP_DIR=$wp_dir_input
+  CURRENT_ENVVARS_PRIVATE_DIR="$WP_DIR/conf/apache2"
+  mkdir -p "$CURRENT_ENVVARS_PRIVATE_DIR"
+  CURRENT_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_PRIVATE_DIR/envvars.private"
+
+  echo '# -*- sh -*-' > "$CURRENT_ENVVARS_PRIVATE_PATH"
+  echo '# envvars.private - private environment variables for apache2ctl' >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+  echo "export WP_DIR=$WP_DIR" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+
+  echo -n "Enter site domain, e.g., www.wikipathways.org, and press [ENTER]: "
+  read wp_domain_input
+  export WP_DOMAIN=$wp_domain_input
+  echo "export WP_DOMAIN=$WP_DOMAIN" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+
+  echo -n "Enter database user, e.g., wikiuser, and press [ENTER]: "
+  read wp_dbuser_input
+  export WP_DBUSER=$wp_dbuser_input
+  echo "export WP_DBUSER=$WP_DBUSER" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+
+  echo -n "Enter database pass, e.g., wikiuser, and press [ENTER]: "
+  read wp_dbpass_input
+  export WP_DBPASS=$wp_dbpass_input
+  echo "export WP_DBPASS=$WP_DBPASS" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+
+  echo -n "Enter database name, e.g., wikipathways, and press [ENTER]: "
+  read wp_dbname_input
+  export WP_DBNAME=$wp_dbname_input
+  echo "export WP_DBNAME=$WP_DBNAME" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+
+  echo -n "Enter admin email, e.g., admin@example.com, and press [ENTER]: "
+  read wp_adminemail
+  export WP_ADMINEMAIL=$wp_adminemail
+  echo "export WP_ADMINEMAIL=$WP_ADMINEMAIL" >> "$CURRENT_ENVVARS_PRIVATE_PATH"
+fi
+
+export WP_ROOT=${WP_DIR}/mediawiki
+export WP_LOGDIR=${WP_DIR}/logs
+export WP_DBHOST=localhost
+
+export WP_USESSL=false
+PATH=$PATH:/root/.nix-profile/bin

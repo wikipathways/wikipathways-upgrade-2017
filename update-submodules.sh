@@ -26,7 +26,7 @@ done
 rm -f mediawiki/.htaccess
 ln -s ../htaccess mediawiki/.htaccess
 
-rm -f mediawiki/images
+rm -rf mediawiki/images
 ln -s ../images mediawiki/images
 
 dir=./images

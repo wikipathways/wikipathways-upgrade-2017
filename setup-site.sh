@@ -2,12 +2,16 @@
 
 (
     export PWD=`pwd`;
-    cd conf;
-    find . -type f | xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}"
+    cd conf &&
+        find . -type f | xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}" ||
+            echo No conf directory!
 )
 
 sudo a2ensite wikipathways.conf
 sudo systemctl reload apache2
+
+# Remove Links temporarily
+(cd mediawiki && git reset --hard )
 
 git submodule update --init --recursive
 for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
@@ -51,20 +55,20 @@ if [ ! -L /etc/apache2/mods-enabled/headers.load ]; then
 	sudo a2enmod headers
 fi
 
-wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
+#wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
+#sudo apt-get install -y nodejs
+sudo apt install -y npm
 
-dir=mediawiki/images
-stdir=`stat -c %a mediawiki/images`
+stdir=`stat -c %a images`
 if [ $stdir -ne 1777 ]; then
-	echo need to make images writable
-	sudo chmod 1777 $dir
+	echo Making images writable
+	chmod 1777 $dir
 fi
 
 # Proper way to set up a symlink in Debian
-if [ -x /usr/bin/nodejs ]; then
-    sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
-fi
+# if [ -x /usr/bin/nodejs ]; then
+#     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
+# fi
 
 sudo apt-get autoremove -y
 
