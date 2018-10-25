@@ -74,7 +74,7 @@ else
   . "$EXPECTED_ENVVARS_PRIVATE_PATH"
 fi
 
-sudo systemctl reload apache2
+sudo systemctl restart apache2
 
 # Remove Links temporarily
 (cd mediawiki && git reset --hard )
