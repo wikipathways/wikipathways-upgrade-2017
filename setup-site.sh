@@ -61,7 +61,7 @@ else
     read -rp "Use SSL? y/n [default: yes] " yn
     case $yn in
       [Yy]* ) WP_USESSL="true"; break;;
-      [Nn]* ) WP_USESSL="false"; exit;;
+      [Nn]* ) WP_USESSL="false"; break;;
       * ) echo "Please answer yes or no.";;
     esac
   done
@@ -80,20 +80,7 @@ sudo systemctl reload apache2
 (cd mediawiki && git reset --hard )
 
 git submodule update --init --recursive
-for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
-	rm -rf mediawiki/$i
-	ln -s ../$i mediawiki
-done
-
-for i in extensions/* skins/*; do
-    if [ ! -d mediawiki/$i ]; then
-        rm -rf mediawiki/$i
-	ln -s ../$i mediawiki/$i
-    fi
-done
-
-rm -f mediawiki/.htaccess
-ln -s htaccess mediawiki/.htaccess
+. ./linkify-mediawiki.sh
 
 to_install=""
 is_installed() {
