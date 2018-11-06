@@ -56,4 +56,4 @@ export WP_ROOT=${WP_DIR}/mediawiki
 export WP_LOGDIR=${WP_DIR}/logs
 export WP_DBHOST=localhost
 
-PATH=$PATH:/root/.nix-profile/bin
+PATH=$PATH:/nix/var/nix/profiles/default/bin
