@@ -52,8 +52,4 @@ CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
 EXPECTED_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_DIR/envvars.private"
 . "$EXPECTED_ENVVARS_PRIVATE_PATH"
 
-export WP_ROOT=${WP_DIR}/mediawiki
-export WP_LOGDIR=${WP_DIR}/logs
-export WP_DBHOST=localhost
-
-PATH=$PATH:/nix/var/nix/profiles/default/bin
+. "/home/wikipathways.org/extensions/GPMLConverter/envvars.gpml-converter"
