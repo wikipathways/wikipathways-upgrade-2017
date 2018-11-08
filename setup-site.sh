@@ -96,32 +96,24 @@ is_installed php-xml
 is_installed php-zip
 is_installed composer
 is_installed python-pygments
-is_installed jq
 
 if [ -n "$to_install" ]; then
 	echo Installing: $to_install
 	sudo apt install $to_install
 fi
 
+sudo -i bash "./extensions/GPMLConverter/install"
+
 if [ ! -L /etc/apache2/mods-enabled/headers.load ]; then
 	echo enable mod_headers
 	sudo a2enmod headers
 fi
-
-#wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
-#sudo apt-get install -y nodejs
-sudo apt install -y npm
 
 stdir=`stat -c %a images`
 if [ $stdir -ne 1777 ]; then
 	echo Making images writable
 	chmod 1777 $dir
 fi
-
-# Proper way to set up a symlink in Debian
-# if [ -x /usr/bin/nodejs ]; then
-#     sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1
-# fi
 
 sudo apt-get autoremove -y
 
