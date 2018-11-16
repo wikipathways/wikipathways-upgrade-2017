@@ -52,4 +52,5 @@ CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
 EXPECTED_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_DIR/envvars.private"
 . "$EXPECTED_ENVVARS_PRIVATE_PATH"
 
-. "/home/wikipathways.org/extensions/GPMLConverter/envvars.gpml-converter"
+export GPMLCONVERTER_ENVVARS_PATH="$WP_DIR/extensions/GPMLConverter/envvars"
+. "$GPMLCONVERTER_ENVVARS_PATH"
