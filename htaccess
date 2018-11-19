@@ -2,6 +2,7 @@ RewriteEngine On
 
 RewriteRule ^/?skins/common/images/(.*) /extensions/WikiPathways/images/$1 [L]
 RewriteRule ^/?wpi/webservice2.0/(.*) /extensions/WikiPathways/webservice2.0/index.php?method=$1 [QSA,L]
+RewriteRule ^/?wpi/PathwayWidget.php /extensions/WikiPathways/src/PathwayWidget.php [QSA,L]
 RewriteRule ^/?wpi/(.*) /extensions/WikiPathways/$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
