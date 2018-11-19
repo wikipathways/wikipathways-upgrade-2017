@@ -19,7 +19,5 @@ rm -rf images
 rm -rf extensions
 rm -rf skins
 
-git checkout REL1_31
-git pull origin REL1_31
 git checkout .
 cd ..
