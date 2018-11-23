@@ -1,0 +1,9 @@
+# -*- sh -*-
+# envvars.private - private environment variables for apache2ctl
+export WP_DIR=/home/wikipathways.org
+export WP_DOMAIN=vm1.wikipathways.org
+export WP_DBNAME=wikipathways
+export WP_DBUSER=wikiuser
+export WP_DBPASS=wikiuser
+export WP_ADMINEMAIL=admin@example.org
+export WP_USESSL=true
