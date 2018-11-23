@@ -4,5 +4,9 @@ pass.php
 .#*
 PHPTAGS.sqlite
 tmp
-images/
-conf/apache2/envvars.private
+/conf/apache2/envvars.private
+/images/?
+/images/archive
+/images/temp
+/images/wikipathways
+/images/wpi
