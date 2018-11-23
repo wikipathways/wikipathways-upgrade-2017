@@ -4,3 +4,8 @@ pass.php
 .#*
 PHPTAGS.sqlite
 tmp
+/images/?
+/images/archive
+/images/temp
+/images/wikipathways
+/images/wpi
