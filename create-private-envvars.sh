@@ -59,6 +59,8 @@ if [ ! -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 # -*- sh -*-
 # envvars.private - private environment variables for apache2ctl
 export WP_DIR="$WP_DIR"
+export WP_ROOT="${WP_DIR}/mediawiki"
+export WP_LOGDIR="${WP_DIR}/logs"
 export WP_DOMAIN="$WP_DOMAIN"
 export WP_DBNAME="$WP_DBNAME"
 export WP_DBUSER="$WP_DBUSER"
