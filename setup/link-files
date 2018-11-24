@@ -2,5 +2,4 @@
 
 topdirFile="composer.lock vendor composer.local.json LocalSettings.php package-lock.json images"
 subdirFile=$(echo extensions/* skins/*)
-mediawiki_dir="mediawiki"
 

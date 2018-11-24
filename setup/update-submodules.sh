@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+set -e
 
-mediawiki_dir="mediawiki"
-
-./revert-mediawiki.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+$DIR/revert-mediawiki.sh
 
 # TODO: --recursive is failing with this error:
 # fatal: no submodule mapping found in .gitmodules for path 'jetbrains/phpstorm-stubs'
@@ -11,10 +11,12 @@ mediawiki_dir="mediawiki"
 #git submodule sync && git submodule update --init --recursive
 git submodule sync && git submodule update --init
 
-cd "$mediawiki_dir"
-# TODO: should we run composer update every time?
-#composer update
-git submodule sync && git submodule update --init
-cd ..
+( # subshell so we don't have to come back to where we are
+    cd "$MW_INSTALL_PATH"
+    # TODO: should we run composer update every time?
+    #composer update
+    git submodule sync && git submodule update --init
+}
 
-./linkify-mediawiki.sh
+$DIR/linkify-mediawiki.sh
+
