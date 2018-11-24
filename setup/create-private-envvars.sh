@@ -72,6 +72,8 @@ export WP_USEEMAIL="false"
 export WP_RECAPTCHA_PUBLIC='xxxx'
 export WP_RECAPTCHA_PRIVATE='xxxx'
 
+export WP_BRIDGE_URL='https://webservice.bridgedb.org/'
+
 export WP_DIR="$WP_DIR"
 export WP_ROOT="${WP_DIR}/mediawiki"
 export MW_INSTALL_PATH="${WP_DIR}/mediawiki"
