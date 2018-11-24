@@ -41,7 +41,7 @@ if [ ! -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 
 	WP_USESSL="true"
 	while true; do
-		# Read only one character. "-r" did not make sense here 
+		# Read only one character. "-r" did not make sense here
 		read -N 1 -p "Use SSL? ('y' or 'n' only) " yn
 
 		case $yn in
@@ -66,7 +66,9 @@ if [ ! -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 	echo Generating "'$CURRENT_ENVVARS_PRIVATE_PATH'"
 	tee<<EOF > "$CURRENT_ENVVARS_PRIVATE_PATH"
 # -*- sh -*-
-# envvars.private - private environment variables for apache2ctl
+# envvars.private - server-specific environment variables
+export WP_USEEMAIL="false"
+
 export WP_DIR="$WP_DIR"
 export WP_ROOT="${WP_DIR}/mediawiki"
 export MW_INSTALL_PATH="${WP_DIR}/mediawiki"
