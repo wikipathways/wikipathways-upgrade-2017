@@ -3,9 +3,7 @@
 CURRENT_ENVVARS_PATH="$(readlink -f /etc/apache2/envvars)"
 CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
 EXPECTED_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_DIR/envvars.private"
-if [ -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
-	. "$EXPECTED_ENVVARS_PRIVATE_PATH"
-else
+if [ ! -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 	echo "We need to set private Apache2 environment variables"
 
 	wp_domain_default="www.wikipathways.org"
@@ -63,6 +61,4 @@ else
 	if [ "$CURRENT_ENVVARS_PRIVATE_PATH" != "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 		ln -s "$CURRENT_ENVVARS_PRIVATE_PATH" "$EXPECTED_ENVVARS_PRIVATE_PATH"
 	fi
-
-	. "$EXPECTED_ENVVARS_PRIVATE_PATH"
 fi

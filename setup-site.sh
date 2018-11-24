@@ -1,27 +1,33 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 (
-    export PWD=`pwd`;
-    cd conf &&
-        find . -type f | xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}" ||
-            echo No conf directory!
+	export PWD=`pwd`;
+	cd conf &&
+		find . -type f -a \! -name '*~' |
+			xargs -i{} sudo sh -c "cd /etc; rm -f {}; ln -s $PWD/{} {}" ||
+			echo No conf directory!
 )
-
-sudo a2ensite wikipathways.conf
 
 CURRENT_ENVVARS_PATH="$(readlink -f /etc/apache2/envvars)"
 CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
 EXPECTED_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_DIR/envvars.private"
-if [ -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
-  . "$EXPECTED_ENVVARS_PRIVATE_PATH"
-else
-  ./create-private-envvars.sh
-fi
+./create-private-envvars.sh
+. "$EXPECTED_ENVVARS_PRIVATE_PATH"
 
+sudo a2ensite wikipathways.conf
 sudo systemctl restart apache2
 
 # Remove Links temporarily
 (cd mediawiki && git reset --hard )
+
+gitdir=$(git rev-parse --show-toplevel)
+if [ -f "$gitdir/hooks/post-checkout" -a ! -e "$gitdir/hooks/keep-post-checkout" ]; then
+	rm -f "$gitdir/hooks/post-checkout"
+fi
+
+if [ -f "$gitdir/hooks/post-rewrite" -a ! -e "$gitdir/hooks/keep-post-rewrite" ]; then
+	rm -f "$gitdir/hooks/post-rewrite"
+fi
 
 git submodule update --init --recursive
 . ./linkify-mediawiki.sh
@@ -60,15 +66,3 @@ if [ $stdir -ne 1777 ]; then
 fi
 
 sudo apt-get autoremove -y
-
-cat > "./.git/hooks/post-checkout" <<EOF
-#!/usr/bin/env bash
-./update-submodules.sh
-EOF
-sudo chmod ug+x "./.git/hooks/post-checkout"
-
-cat > "./.git/hooks/post-rewrite" <<EOF
-#!/usr/bin/env bash
-./update-submodules.sh
-EOF
-sudo chmod ug+x "./.git/hooks/post-rewrite"
