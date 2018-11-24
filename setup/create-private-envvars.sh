@@ -51,16 +51,19 @@ if [ ! -e "$EXPECTED_ENVVARS_PRIVATE_PATH" ]; then
 		esac
 	done
 
+	echo
+	echo Configuration complete.
 	if [ -d "$CURRENT_ENVVARS_PRIVATE_DIR" ]; then
 		mkdir -p "$CURRENT_ENVVARS_PRIVATE_DIR"
 	fi
 
 	test -d "$CURRENT_ENVVARS_PRIVATE_DIR" || mkdir -p "$CURRENT_ENVVARS_PRIVATE_DIR"
 	test -w "${CURRENT_ENVVARS_PRIVATE_PATH}" || (
-			touch "${CURRENT_ENVVARS_PRIVATE_PATH}"
-			sudo chmod +w ${CURRENT_ENVVARS_PRIVATE_PATH}
-		)
+		touch "${CURRENT_ENVVARS_PRIVATE_PATH}"
+		sudo chmod +w ${CURRENT_ENVVARS_PRIVATE_PATH}
+	)
 
+	echo Generating "'$CURRENT_ENVVARS_PRIVATE_PATH'"
 	tee<<EOF > "$CURRENT_ENVVARS_PRIVATE_PATH"
 # -*- sh -*-
 # envvars.private - private environment variables for apache2ctl
