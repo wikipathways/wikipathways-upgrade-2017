@@ -1,21 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash -e
 
-mediawiki_dir="mediawiki"
+. ./link-files
 
-for i in composer.lock vendor composer.local.json LocalSettings.php package-lock.json; do
-	rm -rf "$mediawiki_dir/$i"
-	ln -s ../$i "$mediawiki_dir"
+for i in $topdirFile; do
+    test -e $i || ln -s ../$i "$mediawiki_dir/$i"
 done
 
-for i in extensions/* skins/*; do
-    if [ ! -d "$mediawiki_dir/$i" ]; then
-        rm -rf "$mediawiki_dir/$i"
-	ln -s ../../$i "$mediawiki_dir/$i"
-    fi
+for i in $subdirFile; do
+    test -d "$mediawiki_dir/$i" || ln -s ../../$i "$mediawiki_dir/$i"
 done
 
-rm -f "$mediawiki_dir"/.htaccess
-ln -s ../htaccess "$mediawiki_dir/.htaccess"
-
-rm -rf "$mediawiki_dir/images"
-ln -s ../images "$mediawiki_dir/images"
+test -e "$mediawiki_dir/.htaccess" || ln -s ../htaccess "$mediawiki_dir/.htaccess"

@@ -18,7 +18,7 @@ sudo a2ensite wikipathways.conf
 sudo systemctl restart apache2
 
 # Remove Links temporarily
-(cd mediawiki && git reset --hard )
+./delinkify-mediawiki.sh
 
 gitdir=$(git rev-parse --show-toplevel)
 if [ -f "$gitdir/hooks/post-checkout" -a ! -e "$gitdir/hooks/keep-post-checkout" ]; then
