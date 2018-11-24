@@ -1,5 +1,6 @@
 #!/bin/bash
 
 topdirFile="composer.lock vendor composer.local.json LocalSettings.php package-lock.json images"
-subdirFile=$(echo extensions/* skins/*)
+subdirFile=$(cd $WP_DIR; echo extensions/* skins/*)
+
 

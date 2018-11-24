@@ -34,10 +34,6 @@
 	path = extensions/Scribunto
 	url = https://github.com/wikimedia/mediawiki-extensions-Scribunto
 	branch = REL1_31
-[submodule "extensions/CiteThisPage"]
-	path = extensions/CiteThisPage
-	url = https://github.com/wikimedia/mediawiki-extensions-CiteThisPage
-	branch = REL1_31
 [submodule "vendor"]
 	path = vendor
 	url = git@github.com:wikipathways/mediawiki-vendor.git
@@ -53,9 +49,6 @@
 [submodule "extensions/UserLoginLog"]
 	path = extensions/UserLoginLog
 	url = https://github.com/mwstake/mediawiki-extensions-UserLoginLog.git
-[submodule "extensions/CodeEditor"]
-	path = extensions/CodeEditor
-	url = https://github.com/wikimedia/mediawiki-extensions-CodeEditor
 [submodule "extensions/GPML"]
 	path = extensions/GPML
 	url = git@github.com:wikipathways/mediawiki-extensions-WikiPathways-GPML.git

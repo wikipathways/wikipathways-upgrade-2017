@@ -9,16 +9,23 @@ EXPECTED_ENVVARS_PRIVATE_PATH="$CURRENT_ENVVARS_DIR/envvars.private"
 setup/create-private-envvars.sh
 . "$EXPECTED_ENVVARS_PRIVATE_PATH"
 
-# Remove Links temporarily
-setup/delinkify-mediawiki.sh
-
 # Remove git hooks unless requested to keep
 setup/fixup-hooks.sh
 
+# Remove symlinks temporarily
+setup/delinkify-mediawiki.sh
+
+# Check out everything
 git submodule update --init --recursive
+
+# Reset symlinks
 setup/linkify-mediawiki.sh
+
+# Setup OS packages
 setup/install-packages.sh
 
-sudo -i bash "./extensions/GPMLConverter/install"
+# Do GPMLConverter configuration
+sudo -i bash "$WP_DIR/extensions/GPMLConverter/install"
 
+# Finally, set up apache
 setup/apache.sh
