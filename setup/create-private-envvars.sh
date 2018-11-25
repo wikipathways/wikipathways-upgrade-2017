@@ -76,6 +76,9 @@ export WP_BRIDGE_URL='https://webservice.bridgedb.org/'
 
 export WP_INDEX_SERVICE="http://pointer.ucsf.edu:8184/"
 
+export WP_BAD_EMAIL_DOMAINS="example.com example.net"
+export WP_BAD_EMAILS="none@example.ru none@example.org"
+
 export WP_DIR="$WP_DIR"
 export WP_ROOT="${WP_DIR}/mediawiki"
 export MW_INSTALL_PATH="${WP_DIR}/mediawiki"
