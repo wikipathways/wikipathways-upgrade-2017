@@ -74,6 +74,8 @@ export WP_RECAPTCHA_PRIVATE='xxxx'
 
 export WP_BRIDGE_URL='https://webservice.bridgedb.org/'
 
+export WP_INDEX_SERVICE="http://pointer.ucsf.edu:8184/"
+
 export WP_DIR="$WP_DIR"
 export WP_ROOT="${WP_DIR}/mediawiki"
 export MW_INSTALL_PATH="${WP_DIR}/mediawiki"
