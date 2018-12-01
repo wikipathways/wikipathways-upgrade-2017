@@ -19,4 +19,10 @@ sudo chmod -R 644 "$SCRIPT_DIR/../images/"
 # But the directories need different permissions so commands like 'ls' work:
 # drwxr-xr-x 18 www-data wpdevs    150 Oct 23 12:32 wikipathways
 sudo find "$SCRIPT_DIR/../images/" -type d -print0 | xargs -0 sudo chown www-data:wpdevs
-sudo find "$SCRIPT_DIR/../images/" -type d -print0 | xargs -0 sudo chmod 755 
+sudo find "$SCRIPT_DIR/../images/" -type d -print0 | xargs -0 sudo chmod 775 
+
+# So WP devs can edit the metabolite pattern files
+mkdir -p "$SCRIPT_DIR/../images/metabolite-pattern-cache"
+sudo chown -R www-data:wpdevs "$SCRIPT_DIR/../images/metabolite-pattern-cache"
+sudo chmod -R 664 "$SCRIPT_DIR/../images/metabolite-pattern-cache/"
+sudo find "$SCRIPT_DIR/../images/metabolite-pattern-cache/" -type d -print0 | xargs -0 sudo chmod 775 
