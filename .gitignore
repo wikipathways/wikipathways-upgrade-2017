@@ -1,11 +1,24 @@
+# makefile pseudo targets
+setupConfLinks
+composer-setup.php
+composer
+delinkifyMediaWiki
+linkifyMediaWiki
+create-this-file-to-really-do-a-git-update-because-you-will-lose-work-otherwise
+
+# Private files
 pass.php
 oldpass.php
+conf/apache2/envvars.private
+
+# Editor misc
 *~
 \#*#
 .#*
 PHPTAGS.sqlite
 tmp
-conf/apache2/envvars.private
+
+# images are tracked another way
 images/?
 images/archive
 images/temp
