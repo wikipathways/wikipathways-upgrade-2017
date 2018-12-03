@@ -1,5 +1,16 @@
 # Makefile help copied from https://github.com/ianstormtaylor/makefile-help
 
+# files to link to in the top dir
+topdirLinkTargets := composer.lock vendor composer.local.json LocalSettings.php package-lock.json images
+
+# Directories to link to that are in subdirectories
+subdirLinkTargets := $(shell echo extensions/* skins/*)
+
+# Secret flag file
+# See https://www.cmcrossroads.com/article/gnu-make-meets-file-names-spaces-them
+reallyDeploy := .run\ \\\"make\ reallyDeploy\\\"\ to\ continue
+rdTarget := .run\ \"make\ reallyDeploy\"\ to\ continue
+
 .PHONY: help
 # Show this help prompt.
 help:
@@ -79,21 +90,21 @@ setupConfLinks:
 
 .PHONY: updateCheckout
 # Pull in all updates from git
-updateCheckout: ${reallyDeploy}
+updateCheckout: $(rdTarget)
 	# Updating checkout and submodules from git
 	git pull
 	git submodule foreach git reset --hard
 	git submodule update --init --recursive
 
+.PHONY: reallyDeploy
+# Set the "really do this" deploy flag file
+reallyDeploy:
+	touch $(reallyDeploy)
+
 .PHONY: setup
 # Set up the site <-------------------------- Main entry point
 setup: composer setupConfLinks delinkifyMediaWiki updateCheckout linkifyMediaWiki
 	# Done.
-
-.PHONY: reallyDeploy
-# Set the "really do this" deploy flag file
-reallyDeploy:
-	touch ${reallyDeploy}
 
 .PHONY: distclean
 # Revert to a naked checkout
@@ -109,13 +120,4 @@ delConfLinks:
 	cd conf &&                                                                          \
 	find . -type f -a \! -name '*~' |                                                   \
 	  xargs -i{} sudo sh -c "cd /etc; test -L {} && rm -f {}" || true
-
-# files to link to in the top dir
-topdirLinkTargets := composer.lock vendor composer.local.json LocalSettings.php package-lock.json images
-
-# Directories to link to that are in subdirectories
-subdirLinkTargets := $(shell echo extensions/* skins/*)
-
-# Secret flag file
-reallyDeploy := $(trim .run "make reallyDeploy" to continue)
 
