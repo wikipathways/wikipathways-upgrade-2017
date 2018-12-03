@@ -10,7 +10,7 @@ help:
 	@ echo ''
 	@ echo '  Targets:'
 	@ echo ''
-	@ awk '/^#/{ comment = substr($$0,3) } comment && /^[a-zA-Z][a-zA-Z0-9_-]+ ?: *[^=]*$/{ print "   ", $$1, comment }' $(MAKEFILE_LIST) | column -t -s ':' | sort
+	@ awk '/^#/{ comment = substr($$0,3) } comment && /^[a-zA-Z][a-zA-Z0-9_-]+ ?: *[^=]*$$/{ print "   ", $$1, comment }' $(MAKEFILE_LIST) | column -t -s ':' | sort
 	@ echo ''
 	@ echo '  Flags:'
 	@ echo ''
