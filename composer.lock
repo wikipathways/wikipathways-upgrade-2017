@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "0668b475c3fa1805e2aafe6ea0133e05",
     "content-hash": "19034299b3c7c93fea0203ebcdb19601",
     "packages": [
         {
@@ -125,7 +124,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-08-27 06:10:37"
+            "time": "2018-08-27T06:10:37+00:00"
         },
         {
             "name": "composer/semver",
@@ -187,7 +186,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-08-30 16:08:34"
+            "time": "2016-08-30T16:08:34+00:00"
         },
         {
             "name": "cssjanus/cssjanus",
@@ -222,64 +221,7 @@
                 "Apache-2.0"
             ],
             "description": "Convert CSS stylesheets between left-to-right and right-to-left.",
-            "time": "2017-03-14 20:57:08"
-        },
-        {
-            "name": "eloquent/composer-npm-bridge",
-            "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/composer-npm-bridge.git",
-                "reference": "4e6346a0162a228caf30bc10ab8442cb6be87db0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/composer-npm-bridge/zipball/4e6346a0162a228caf30bc10ab8442cb6be87db0",
-                "reference": "4e6346a0162a228caf30bc10ab8442cb6be87db0",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1",
-                "php": ">=7"
-            },
-            "require-dev": {
-                "composer/composer": "dev-master",
-                "eloquent/phony-phpunit": "^2",
-                "errors/exceptions": "^0.2",
-                "phpunit/phpunit": "^6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Eloquent\\Composer\\NpmBridge\\NpmBridgePlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Composer\\NpmBridge\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "NPM integration for Composer packages.",
-            "homepage": "https://github.com/eloquent/composer-npm-bridge",
-            "keywords": [
-                "Bridge",
-                "composer",
-                "composer-plugin",
-                "integration",
-                "npm",
-                "package",
-                "plugin"
-            ],
-            "time": "2017-09-19 10:05:43"
+            "time": "2017-03-14T20:57:08+00:00"
         },
         {
             "name": "liuggio/statsd-php-client",
@@ -329,7 +271,7 @@
                 "php",
                 "statsd"
             ],
-            "time": "2015-07-23 23:12:45"
+            "time": "2015-07-23T23:12:45+00:00"
         },
         {
             "name": "oojs/oojs-ui",
@@ -409,7 +351,7 @@
             ],
             "description": "Provides library of common widgets, layouts, and windows.",
             "homepage": "https://www.mediawiki.org/wiki/OOUI",
-            "time": "2018-04-17 21:24:45"
+            "time": "2018-04-17T21:24:45+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -471,7 +413,7 @@
                 "php",
                 "stylesheet"
             ],
-            "time": "2017-03-28 22:19:25"
+            "time": "2017-03-28T22:19:25+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -518,7 +460,7 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Console_Getopt",
-            "time": "2015-07-20 20:28:12"
+            "time": "2015-07-20T20:28:12+00:00"
         },
         {
             "name": "pear/mail",
@@ -576,7 +518,7 @@
             ],
             "description": "Class that provides multiple interfaces for sending emails.",
             "homepage": "http://pear.php.net/package/Mail",
-            "time": "2017-04-11 17:27:29"
+            "time": "2017-04-11T17:27:29+00:00"
         },
         {
             "name": "pear/mail_mime",
@@ -622,7 +564,7 @@
             ],
             "description": "Mail_Mime provides classes to create MIME messages",
             "homepage": "http://pear.php.net/package/Mail_Mime",
-            "time": "2017-11-17 09:21:45"
+            "time": "2017-11-17T09:21:45+00:00"
         },
         {
             "name": "pear/net_smtp",
@@ -682,7 +624,7 @@
                 "mail",
                 "smtp"
             ],
-            "time": "2017-01-14 18:19:55"
+            "time": "2017-01-14T18:19:55+00:00"
         },
         {
             "name": "pear/net_socket",
@@ -735,7 +677,7 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Net_Socket",
-            "time": "2015-03-22 15:48:19"
+            "time": "2015-03-22T15:48:19+00:00"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -779,7 +721,7 @@
                 }
             ],
             "description": "Minimal set of PEAR core files to be used as composer dependency",
-            "time": "2018-08-22 19:28:09"
+            "time": "2018-08-22T19:28:09+00:00"
         },
         {
             "name": "pear/pear_exception",
@@ -834,7 +776,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10 20:07:52"
+            "time": "2015-02-10T20:07:52+00:00"
         },
         {
             "name": "psr/log",
@@ -881,7 +823,56 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v3.4.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2",
+                "reference": "abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-20T16:10:26+00:00"
         },
         {
             "name": "wikimedia/assert",
@@ -926,7 +917,7 @@
                 "precondition",
                 "qa"
             ],
-            "time": "2015-04-29 17:23:50"
+            "time": "2015-04-29T17:23:50+00:00"
         },
         {
             "name": "wikimedia/at-ease",
@@ -973,7 +964,7 @@
             ],
             "description": "Safe replacement to @ for suppressing warnings.",
             "homepage": "https://www.mediawiki.org/wiki/at-ease",
-            "time": "2017-12-30 10:52:27"
+            "time": "2017-12-30T10:52:27+00:00"
         },
         {
             "name": "wikimedia/base-convert",
@@ -1022,7 +1013,7 @@
             ],
             "description": "Convert an arbitrarily-long string from one numeric base to another, optionally zero-padding to a minimum column width.",
             "homepage": "https://www.mediawiki.org/wiki/base_convert",
-            "time": "2018-10-21 05:06:11"
+            "time": "2018-10-21T05:06:11+00:00"
         },
         {
             "name": "wikimedia/cdb",
@@ -1075,7 +1066,7 @@
             ],
             "description": "Constant Database (CDB) wrapper library for PHP. Provides pure-PHP fallback when dba_* functions are absent.",
             "homepage": "https://www.mediawiki.org/wiki/CDB",
-            "time": "2016-05-29 07:39:26"
+            "time": "2016-05-29T07:39:26+00:00"
         },
         {
             "name": "wikimedia/cldr-plural-rule-parser",
@@ -1121,7 +1112,7 @@
             ],
             "description": "Evaluates plural rules specified in the CLDR project notation.",
             "homepage": "https://www.mediawiki.org/wiki/CLDRPluralRuleParser",
-            "time": "2015-08-28 17:03:03"
+            "time": "2015-08-28T17:03:03+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
@@ -1170,7 +1161,7 @@
                 }
             ],
             "description": "Composer plugin to merge multiple composer.json files",
-            "time": "2017-04-25 02:31:25"
+            "time": "2017-04-25T02:31:25+00:00"
         },
         {
             "name": "wikimedia/html-formatter",
@@ -1214,7 +1205,7 @@
             ],
             "description": "Performs transformations of HTML by wrapping around libxml2 and working around its countless bugs.",
             "homepage": "https://www.mediawiki.org/wiki/HtmlFormatter",
-            "time": "2018-04-14 10:06:56"
+            "time": "2018-04-14T10:06:56+00:00"
         },
         {
             "name": "wikimedia/ip-set",
@@ -1256,7 +1247,7 @@
             ],
             "description": "Efficiently match IP addresses against a set of CIDR specifications.",
             "homepage": "https://github.com/wikimedia/IPSet",
-            "time": "2017-12-30 10:52:03"
+            "time": "2017-12-30T10:52:03+00:00"
         },
         {
             "name": "wikimedia/object-factory",
@@ -1300,7 +1291,7 @@
             ],
             "description": "Construct objects from configuration instructions",
             "homepage": "https://www.mediawiki.org/wiki/ObjectFactory",
-            "time": "2018-01-25 23:57:37"
+            "time": "2018-01-25T23:57:37+00:00"
         },
         {
             "name": "wikimedia/php-session-serializer",
@@ -1346,7 +1337,7 @@
             ],
             "description": "Provides methods like PHP's session_encode and session_decode that don't mess with $_SESSION",
             "homepage": "https://www.mediawiki.org/wiki/Php-session-serializer",
-            "time": "2018-04-18 13:20:04"
+            "time": "2018-04-18T13:20:04+00:00"
         },
         {
             "name": "wikimedia/purtle",
@@ -1412,7 +1403,7 @@
                 "Turtle",
                 "serializer"
             ],
-            "time": "2018-03-20 09:26:13"
+            "time": "2018-03-20T09:26:13+00:00"
         },
         {
             "name": "wikimedia/relpath",
@@ -1455,7 +1446,7 @@
             ],
             "description": "Compute a relative filepath between two paths.",
             "homepage": "https://www.mediawiki.org/wiki/RelPath",
-            "time": "2018-01-18 21:23:40"
+            "time": "2018-01-18T21:23:40+00:00"
         },
         {
             "name": "wikimedia/remex-html",
@@ -1502,7 +1493,7 @@
             ],
             "description": "Fast HTML 5 parser",
             "homepage": "https://www.mediawiki.org/wiki/RemexHtml",
-            "time": "2018-10-15 20:31:28"
+            "time": "2018-10-15T20:31:28+00:00"
         },
         {
             "name": "wikimedia/running-stat",
@@ -1544,7 +1535,7 @@
             ],
             "description": "PHP implementations of online statistical algorithms",
             "homepage": "https://www.mediawiki.org/wiki/RunningStat",
-            "time": "2018-01-18 22:18:47"
+            "time": "2018-01-18T22:18:47+00:00"
         },
         {
             "name": "wikimedia/scoped-callback",
@@ -1586,7 +1577,7 @@
             ],
             "description": "Class for asserting that a callback happens when a dummy object leaves scope",
             "homepage": "https://www.mediawiki.org/wiki/ScopedCallback",
-            "time": "2016-09-29 07:03:03"
+            "time": "2016-09-29T07:03:03+00:00"
         },
         {
             "name": "wikimedia/timestamp",
@@ -1631,7 +1622,7 @@
             ],
             "description": "Creation, parsing, and conversion of timestamps",
             "homepage": "https://www.mediawiki.org/wiki/Timestamp",
-            "time": "2016-09-30 10:00:56"
+            "time": "2016-09-30T10:00:56+00:00"
         },
         {
             "name": "wikimedia/utfnormal",
@@ -1676,7 +1667,7 @@
             ],
             "description": "Contains Unicode normalization routines, including both pure PHP implementations and automatic use of the 'intl' PHP extension when present",
             "homepage": "https://www.mediawiki.org/wiki/utfnormal",
-            "time": "2018-02-27 02:26:36"
+            "time": "2018-02-27T02:26:36+00:00"
         },
         {
             "name": "wikimedia/wait-condition-loop",
@@ -1718,7 +1709,7 @@
             ],
             "description": "Wait loop that reaches a condition or times out",
             "homepage": "https://www.mediawiki.org/wiki/WaitConditionLoop",
-            "time": "2016-10-01 06:58:30"
+            "time": "2016-10-01T06:58:30+00:00"
         },
         {
             "name": "wikimedia/wrappedstring",
@@ -1761,7 +1752,7 @@
             ],
             "description": "Automatically compact sequentially-outputted strings that share a common prefix / suffix pair.",
             "homepage": "https://www.mediawiki.org/wiki/WrappedString",
-            "time": "2017-12-30 10:52:27"
+            "time": "2017-12-30T10:52:27+00:00"
         },
         {
             "name": "wikipathways/gpml",
@@ -1769,12 +1760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML.git",
-                "reference": "898b2661fe6a53143a79a49ac324ddf3ab12d3a8"
+                "reference": "955903cf979076bb71caea68111b72304838c94e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/898b2661fe6a53143a79a49ac324ddf3ab12d3a8",
-                "reference": "898b2661fe6a53143a79a49ac324ddf3ab12d3a8",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPML/zipball/955903cf979076bb71caea68111b72304838c94e",
+                "reference": "955903cf979076bb71caea68111b72304838c94e",
                 "shasum": ""
             },
             "require": {
@@ -1844,25 +1835,24 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPML/issues"
             },
-            "time": "2018-11-19 21:19:05"
+            "time": "2018-12-03T20:01:55+00:00"
         },
         {
             "name": "wikipathways/gpml-converter",
-            "version": "dev-feature-mwupgrade",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter.git",
-                "reference": "f5463a65ac3a6d9d0bbf5b0f47a942a5b315798d"
+                "reference": "1035d56af00af82da7001ba96040b4097320a533"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/f5463a65ac3a6d9d0bbf5b0f47a942a5b315798d",
-                "reference": "f5463a65ac3a6d9d0bbf5b0f47a942a5b315798d",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/zipball/1035d56af00af82da7001ba96040b4097320a533",
+                "reference": "1035d56af00af82da7001ba96040b4097320a533",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "1.*,>=1.0.1",
-                "eloquent/composer-npm-bridge": "^4",
                 "ext-json": "*",
                 "ext-xml": "*",
                 "php": ">=5.3.0"
@@ -1872,7 +1862,7 @@
                 "jakub-onderka/php-parallel-lint": "0.9.2",
                 "mediawiki/mediawiki-codesniffer": "14.1.0",
                 "phpmd/phpmd": "~2.1",
-                "phpunit/phpunit": "4.8.36"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "mediawiki-extension",
             "extra": {
@@ -1880,14 +1870,14 @@
             },
             "autoload": {
                 "psr-4": {
-                    "WikiPathways\\GPML\\Converter\\Tests\\": "tests/phpunit",
+                    "WikiPathways\\GPML\\Converter\\Tests\\": "tests",
                     "WikiPathways\\GPML\\Converter\\Maintenance\\": "maintenance",
                     "WikiPathways\\GPML\\": "src"
                 }
             },
             "scripts": {
                 "phpunit": [
-                    "php $MW_INSTALL_PATH/tests/phpunit/phpunit.php -c .phpunit.xml.dist"
+                    "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/phpunit"
                 ],
                 "phpdbg": [
                     "phpdbg -qrr $MW_INSTALL_PATH/tests/phpunit/phpunit.php -c .phpunit.xml.dist"
@@ -1924,10 +1914,10 @@
                 "wiki"
             ],
             "support": {
-                "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/tree/feature-mwupgrade",
+                "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways-GPMLConverter/issues"
             },
-            "time": "2018-06-21 18:54:47"
+            "time": "2018-12-03T21:33:24+00:00"
         },
         {
             "name": "wikipathways/wikipathways",
@@ -1935,19 +1925,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways.git",
-                "reference": "1715dc4c9ebfaae88594fdb40c6936a79547e15a"
+                "reference": "4076311b44944216c1cc1ca174a1ec94463d9ffc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/1715dc4c9ebfaae88594fdb40c6936a79547e15a",
-                "reference": "1715dc4c9ebfaae88594fdb40c6936a79547e15a",
+                "url": "https://api.github.com/repos/wikipathways/mediawiki-extensions-WikiPathways/zipball/4076311b44944216c1cc1ca174a1ec94463d9ffc",
+                "reference": "4076311b44944216c1cc1ca174a1ec94463d9ffc",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "1.*,>=1.0.1",
                 "php": ">=5.6.0",
                 "wikipathways/gpml": "dev-master",
-                "wikipathways/gpml-converter": "dev-feature-mwupgrade"
+                "wikipathways/gpml-converter": "dev-master"
             },
             "require-dev": {
                 "jakub-onderka/php-console-highlighter": "0.3.2",
@@ -1992,7 +1982,7 @@
                 "source": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/tree/master",
                 "issues": "https://github.com/wikipathways/mediawiki-extensions-WikiPathways/issues"
             },
-            "time": "2018-11-25 02:18:04"
+            "time": "2018-12-03T21:09:38+00:00"
         },
         {
             "name": "zordius/lightncandy",
@@ -2039,7 +2029,7 @@
                 "php",
                 "template"
             ],
-            "time": "2015-11-05 07:14:57"
+            "time": "2015-11-05T07:14:57+00:00"
         }
     ],
     "packages-dev": [
@@ -2102,7 +2092,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-01-31 13:17:27"
+            "time": "2018-01-31T13:17:27+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2135,7 +2125,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24 07:27:01"
+            "time": "2014-10-24T07:27:01+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -2189,7 +2179,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14 21:17:01"
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -2237,7 +2227,7 @@
             "keywords": [
                 "test"
             ],
-            "time": "2016-01-20 08:20:44"
+            "time": "2016-01-20T08:20:44+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2279,7 +2269,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
-            "time": "2018-09-29 17:23:10"
+            "time": "2018-09-29T17:23:10+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -2323,7 +2313,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20 18:58:01"
+            "time": "2015-04-20T18:58:01+00:00"
         },
         {
             "name": "jakub-onderka/php-parallel-lint",
@@ -2370,7 +2360,7 @@
             ],
             "description": "This tool check syntax of PHP files about 20x faster than serial check.",
             "homepage": "https://github.com/JakubOnderka/PHP-Parallel-Lint",
-            "time": "2015-12-15 10:42:16"
+            "time": "2015-12-15T10:42:16+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -2378,12 +2368,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JetBrains/phpstorm-stubs.git",
-                "reference": "1b9906084d6635456fcf3f3a01f0d7d5b99a578a"
+                "reference": "693fe4c8963ebe5d4da60ee5491b0f17abc250bc"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/693fe4c8963ebe5d4da60ee5491b0f17abc250bc",
-                "reference": "1b9906084d6635456fcf3f3a01f0d7d5b99a578a",
+                "reference": "693fe4c8963ebe5d4da60ee5491b0f17abc250bc",
                 "shasum": ""
             },
             "require-dev": {
@@ -2408,7 +2398,7 @@
                 "stubs",
                 "type"
             ],
-            "time": "2017-01-27 15:47:33"
+            "time": "2018-11-27T15:18:31+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2474,7 +2464,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2018-02-14 22:26:30"
+            "time": "2018-02-14T22:26:30+00:00"
         },
         {
             "name": "mediawiki/mediawiki-codesniffer",
@@ -2518,7 +2508,7 @@
                 "codesniffer",
                 "mediawiki"
             ],
-            "time": "2018-04-13 18:30:54"
+            "time": "2018-04-13T18:30:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2596,7 +2586,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13 07:08:03"
+            "time": "2017-03-13T07:08:03+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2641,7 +2631,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-10-19 19:58:43"
+            "time": "2017-10-19T19:58:43+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2692,7 +2682,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-12-26 14:43:21"
+            "time": "2017-12-26T14:43:21+00:00"
         },
         {
             "name": "nmred/kafka-php",
@@ -2732,7 +2722,7 @@
                 "client",
                 "kafka"
             ],
-            "time": "2015-12-02 12:06:23"
+            "time": "2015-12-02T12:06:23+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2787,7 +2777,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2017-03-05 18:14:27"
+            "time": "2017-03-05T18:14:27+00:00"
         },
         {
             "name": "phar-io/version",
@@ -2834,7 +2824,7 @@
                 }
             ],
             "description": "Library for handling version information and constraints",
-            "time": "2017-03-05 17:38:23"
+            "time": "2017-03-05T17:38:23+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2888,7 +2878,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2017-09-11 18:02:19"
+            "time": "2017-09-11T18:02:19+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2939,7 +2929,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30 07:14:17"
+            "time": "2017-11-30T07:14:17+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2986,7 +2976,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2017-07-14 14:27:02"
+            "time": "2017-07-14T14:27:02+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -3049,7 +3039,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-08-05 17:53:17"
+            "time": "2018-08-05T17:53:17+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3112,7 +3102,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-04-06 15:36:58"
+            "time": "2018-04-06T15:36:58+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3159,7 +3149,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2017-11-27 13:52:08"
+            "time": "2017-11-27T13:52:08+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -3200,7 +3190,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -3249,7 +3239,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-02-26 11:10:40"
+            "time": "2017-02-26T11:10:40+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -3298,7 +3288,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-11-27 05:48:46"
+            "time": "2017-11-27T05:48:46+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -3382,7 +3372,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-09-08 15:10:43"
+            "time": "2018-09-08T15:10:43+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3441,7 +3431,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-08-09 05:50:03"
+            "time": "2018-08-09T05:50:03+00:00"
         },
         {
             "name": "psy/psysh",
@@ -3514,7 +3504,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-07-29 19:30:02"
+            "time": "2017-07-29T19:30:02+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3559,7 +3549,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2017-03-04 06:30:41"
+            "time": "2017-03-04T06:30:41+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -3623,7 +3613,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-02-01 13:46:46"
+            "time": "2018-02-01T13:46:46+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -3675,7 +3665,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-08-03 08:09:46"
+            "time": "2017-08-03T08:09:46+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -3725,7 +3715,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-07-01 08:51:00"
+            "time": "2017-07-01T08:51:00+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -3792,7 +3782,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-04-03 13:19:02"
+            "time": "2017-04-03T13:19:02+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -3843,7 +3833,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-04-27 15:39:26"
+            "time": "2017-04-27T15:39:26+00:00"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -3890,7 +3880,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2017-08-03 12:35:26"
+            "time": "2017-08-03T12:35:26+00:00"
         },
         {
             "name": "sebastian/object-reflector",
@@ -3935,7 +3925,7 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
-            "time": "2017-03-29 09:07:27"
+            "time": "2017-03-29T09:07:27+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -3988,7 +3978,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2017-03-03 06:23:57"
+            "time": "2017-03-03T06:23:57+00:00"
         },
         {
             "name": "sebastian/resource-operations",
@@ -4030,7 +4020,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2015-07-28 20:34:47"
+            "time": "2015-07-28T20:34:47+00:00"
         },
         {
             "name": "sebastian/version",
@@ -4073,7 +4063,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2016-10-03 07:35:21"
+            "time": "2016-10-03T07:35:21+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -4124,7 +4114,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-02-20 21:35:23"
+            "time": "2018-02-20T21:35:23+00:00"
         },
         {
             "name": "symfony/console",
@@ -4193,7 +4183,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-26 12:48:07"
+            "time": "2018-11-26T12:48:07+00:00"
         },
         {
             "name": "symfony/debug",
@@ -4249,7 +4239,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-11 19:48:54"
+            "time": "2018-11-11T19:48:54+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -4308,7 +4298,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21 13:07:52"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -4377,7 +4367,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-11-20 16:10:26"
+            "time": "2018-11-20T16:10:26+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -4417,7 +4407,7 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2017-04-07 12:08:54"
+            "time": "2017-04-07T12:08:54+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -4467,7 +4457,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-01-29 19:49:41"
+            "time": "2018-01-29T19:49:41+00:00"
         },
         {
             "name": "wikimedia/avro",
@@ -4535,7 +4525,7 @@
             "keywords": [
                 "serialization"
             ],
-            "time": "2018-03-28 22:33:00"
+            "time": "2018-03-28T22:33:00+00:00"
         },
         {
             "name": "wikimedia/testing-access-wrapper",
@@ -4585,7 +4575,7 @@
             ],
             "description": "A simple helper class to access non-public elements of a class when testing.",
             "homepage": "https://www.mediawiki.org/wiki/Testing-access-wrapper",
-            "time": "2017-04-19 16:43:33"
+            "time": "2017-04-19T16:43:33+00:00"
         },
         {
             "name": "wmde/hamcrest-html-matchers",
@@ -4630,7 +4620,7 @@
                 }
             ],
             "description": "Set of Hamcrest matchers for HTML assertrions ",
-            "time": "2017-07-05 07:12:27"
+            "time": "2017-07-05T07:12:27+00:00"
         }
     ],
     "aliases": [],
