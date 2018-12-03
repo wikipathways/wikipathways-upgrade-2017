@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-setup/conf-links.sh
+make setupConfLinks
 
 CURRENT_ENVVARS_PATH="$(readlink -f /etc/apache2/envvars)"
 CURRENT_ENVVARS_DIR="$(dirname $CURRENT_ENVVARS_PATH)"
@@ -13,13 +13,13 @@ setup/create-private-envvars.sh
 setup/fixup-hooks.sh
 
 # Remove symlinks temporarily
-setup/delinkify-mediawiki.sh
+make delinkifyMediaWiki
 
 # Check out everything
 git submodule update --init --recursive
 
 # Reset symlinks
-setup/linkify-mediawiki.sh
+make linkifyMediaWiki
 
 # Setup OS packages
 setup/install-packages.sh

@@ -1,1 +1,4 @@
 *.log
+converted-gpmls.txt
+invalid-gpmls.txt
+unconvertible-gpmls.txt
