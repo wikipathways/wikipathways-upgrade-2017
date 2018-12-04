@@ -28,6 +28,9 @@ help:
 	@ awk '/^#/{ comment = substr($$0,3) } comment && /^[a-zA-Z][a-zA-Z0-9_-]+ ?\?=/{ print "   ", $$1, $$2, comment }' $(MAKEFILE_LIST) | column -t -s '?=' | sort
 	@ echo ''
 
+conf/apache2/envvars.private:
+	setup/create-private-envvars.sh
+
 # Composer automation adapted from
 # https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
 
@@ -99,21 +102,35 @@ updateCheckout: $(rdTarget)
 .PHONY: reallyDeploy
 # Set the "really do this" deploy flag file
 reallyDeploy:
+	# Make sure you are ready to deploy.  If not remove this file:
 	touch $(reallyDeploy)
 
-conf/apache2/envvars.private:
-	setup/create-private-envvars.sh
+installPackages:
+	@setup/install-packages.sh
+	@touch $@
+
+confGPMLConverter:
+	@sudo bash extensions/GPMLConverter/install
+	@touch $@
+
+setupApache:
+	# configuring apache
+	a2query -m mod_headers || sudo a2enmod headers
+	a2query -s wikipathways.conf || sudo a2ensite wikipathways.conf
+	sudo systemctl restart apache2
+	touch $@
 
 .PHONY: setup
 # Set up the site <-------------------------- Main entry point
-setup: conf/apache2/envvars.private composer setupConfLinks delinkifyMediaWiki updateCheckout linkifyMediaWiki
+setup: conf/apache2/envvars.private composer setupConfLinks delinkifyMediaWiki updateCheckout linkifyMediaWiki installPackages confGPMLConverter setupApache
 	# Done.
 
 .PHONY: distclean
 # Revert to a naked checkout
 distclean: delConfLinks delinkifyMediaWiki
 	# Removing ignored files setup creates
-	@rm -f composer setupConfLinks composer-setup.php ${reallyDeploy}
+	@rm -f composer setupConfLinks composer-setup.php ${reallyDeploy} installPackages confGPMLConveter setupApache
+	@test -f conf/apache2/envvars.private && echo Not touching envvars.private || true
 
 .PHONY: delConfLinks
 # Remove links to configurations
