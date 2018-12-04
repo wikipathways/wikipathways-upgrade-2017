@@ -26,13 +26,15 @@ in [
   # https://www.mediawiki.org/wiki/Manual:Installation_requirements#Optional_dependencies
   pkgs.bash
   pkgs.diffutils # diff3
-  pkgs.imagemagick
+
+  # We're not using ImageMagick, right?
+  #pkgs.imagemagick
+  pkgs.inkscape
 
   # Other
   php72Packages.composer
   pkgs.lucene
   pkgs.openssh
-  pkgs.inkscape
 
   # Are we using sendmail or postfix?
   # https://www.mediawiki.org/wiki/Manual_talk:$wgSMTP#Using_Sendmail_or_Postfix_(on_Ubuntu/Linux)
