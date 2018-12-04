@@ -50,7 +50,7 @@ composer-setup.php:
 	@php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
 # Remove links from mediawiki checkout
-delinkifyMediaWiki:
+delinkifyMediaWiki: $(rdTarget)
 	# Removing MediaWiki symlinks
 	@test -e "mediawiki/.htaccess" && rm -f "mediawiki/.htaccess" || true
 	@test -e "mediawiki/images" && rm -rf "mediawiki/images" || true
@@ -62,7 +62,7 @@ delinkifyMediaWiki:
 	@rm -f linkifyMediaWiki
 
 # Add links to mediawiki checkout
-linkifyMediaWiki:
+linkifyMediaWiki: $(rdTarget)
 	# Adding MediaWiki symlinks
 	@test -L "mediawiki/.htaccess" || ln -s ../htaccess "mediawiki/.htaccess"
 	@for i in ${topdirLinkTargets}; do \
@@ -92,9 +92,9 @@ setupConfLinks:
 # Pull in all updates from git
 updateCheckout: $(rdTarget)
 	# Updating checkout and submodules from git
-	git pull
-	git submodule foreach git reset --hard
-	git submodule update --init --recursive
+	@git pull -q
+	@git submodule foreach -q git reset -q --hard
+	@git submodule update -q --init --recursive
 
 .PHONY: reallyDeploy
 # Set the "really do this" deploy flag file
