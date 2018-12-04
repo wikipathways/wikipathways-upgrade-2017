@@ -101,9 +101,12 @@ updateCheckout: $(rdTarget)
 reallyDeploy:
 	touch $(reallyDeploy)
 
+conf/apache2/envvars.private:
+	setup/create-private-envvars.sh
+
 .PHONY: setup
 # Set up the site <-------------------------- Main entry point
-setup: composer setupConfLinks delinkifyMediaWiki updateCheckout linkifyMediaWiki
+setup: conf/apache2/envvars.private composer setupConfLinks delinkifyMediaWiki updateCheckout linkifyMediaWiki
 	# Done.
 
 .PHONY: distclean
