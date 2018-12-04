@@ -4,7 +4,7 @@ composer-setup.php
 composer
 delinkifyMediaWiki
 linkifyMediaWiki
-create-this-file-to-really-do-a-git-update-because-you-will-lose-work-otherwise
+.run \\\"make reallyDeploy\\\" to continue
 
 # Private files
 pass.php
