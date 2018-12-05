@@ -2,12 +2,15 @@ with import <nixpkgs> { config.allowUnfree = true; };
 let
   custom = import (fetchGit {
     url = "https://github.com/ariutta/nixpkgs-custom.git";
-    rev = "76b4e3d420f440aa8998fb9d0e8fda92a1d85d9f";
+    #rev = "722afd6c5a66446f65e4737f55a2b0b98775c4cb";
+    rev = "b0e122e3d0c726dada9ba3dd5ca211084ce2b231";
     ref = "master";
-  }) {};
-# Do we need PathVisio-Java other than for GPMLConverter?
-# Leaving this here in case we do, but it's commented out.
-#  pathvisio = callPackage (custom.pathvisio {
+  });
+# TODO: I'd like to specify parameters for pathvisio,
+# but I get an error when I use the second expression
+# below, so I'm just using the first one for now.
+  pathvisio = custom.pathvisio;
+#  pathvisio = callPackage custom.pathvisio {
 #    organism="Homo sapiens";
 #    headless=true;
 #    genes=false;
@@ -16,7 +19,7 @@ let
 #    # NOTE: this seems high, but I got an error
 #    #       regarding memory when it was lower.
 #    memory="2048m";
-#  });
+#  };
 in [
   # https://www.mediawiki.org/wiki/Manual:Installation_requirements
   pkgs.apacheHttpd
@@ -43,6 +46,5 @@ in [
   # Are we using Parsoid?
   # https://www.mediawiki.org/wiki/Parsoid
 
-  # See note above.
-  #pathvisio
+  pathvisio
 ] ++ (if stdenv.isDarwin then [] else [])

@@ -1077,3 +1077,147 @@ postfix-3.3.1
 |   +---glibc-2.27
 |   +---gawk-4.2.1
 +---postfix-3.3.1
+PathVisio-3.3.0-Homo_sapiens
++---Biopax3GPML.jar?raw=true
++---xmlstarlet-1.6.1
+|   +---glibc-2.27
+|   +---libxml2-2.9.8
+|   +---libxslt-1.1.32
++---getopt-1.1.4
+|   +---glibc-2.27
++---default-builder.sh
++---pathvisio.xml
++---bash-4.4-p23
++---pvplugins-bridgedbSettings-1.0.0.jar
++---coreutils-8.30
++---openjdk-8u192b26-jre
+|   +---glibc-2.27
+|   +---zlib-1.2.11
+|   +---libX11-1.6.6
+|   +---libXrender-0.9.10
+|   +---alsa-lib-1.1.7
+|   |   +---glibc-2.27
+|   |   +---alsa-lib-1.1.7
+|   +---libXext-1.3.3
+|   +---libXrandr-1.5.1
+|   +---file-5.35
+|   |   +---glibc-2.27
+|   |   +---zlib-1.2.11
+|   |   +---file-5.35
+|   +---liberation-fonts-2.00.1
+|   +---glib-2.56.0
+|   +---hook
+|   +---libXinerama-1.1.4
+|   +---freetype-2.9
+|   +---fontconfig-2.12.6-lib
+|   +---gcc-7.3.0-lib
+|   +---cups-2.2.6-lib
+|   +---giflib-5.1.4
+|   +---gconf-3.2.6
+|   |   +---glibc-2.27
+|   |   +---pcre-8.42
+|   |   +---zlib-1.2.11
+|   |   +---util-linux-2.32.1
+|   |   +---libffi-3.2.1
+|   |   +---glib-2.56.0
+|   |   +---ORBit2-2.14.19
+|   |   |   +---glibc-2.27
+|   |   |   +---pcre-8.42
+|   |   |   +---libffi-3.2.1
+|   |   |   +---glib-2.56.0
+|   |   |   +---libIDL-0.8.14
+|   |   |   |   +---glibc-2.27
+|   |   |   |   +---pcre-8.42
+|   |   |   |   +---glib-2.56.0
+|   |   |   |   +---bash-4.4-p23
+|   |   |   |   +---libIDL-0.8.14
+|   |   |   +---ORBit2-2.14.19
+|   |   +---libxml2-2.9.8
+|   |   +---systemd-239-lib
+|   |   +---dbus-1.12.10-lib
+|   |   +---dbus-glib-0.110
+|   |   |   +---glibc-2.27
+|   |   |   +---zlib-1.2.11
+|   |   |   +---expat-2.2.6
+|   |   |   +---pcre-8.42
+|   |   |   +---util-linux-2.32.1
+|   |   |   +---libffi-3.2.1
+|   |   |   +---glib-2.56.0
+|   |   |   +---systemd-239-lib
+|   |   |   +---dbus-1.12.10-lib
+|   |   |   +---dbus-glib-0.110
+|   |   +---python-2.7.15
+|   |   +---polkit-0.115
+|   |   |   +---glibc-2.27
+|   |   |   +---zlib-1.2.11
+|   |   |   +---expat-2.2.6
+|   |   |   +---pcre-8.42
+|   |   |   +---util-linux-2.32.1
+|   |   |   +---libffi-3.2.1
+|   |   |   +---glib-2.56.0
+|   |   |   +---gcc-7.3.0-lib
+|   |   |   +---spidermonkey-52.9.0
+|   |   |   |   +---glibc-2.27
+|   |   |   |   +---zlib-1.2.11
+|   |   |   |   +---nspr-4.20
+|   |   |   |   |   +---glibc-2.27
+|   |   |   |   |   +---nspr-4.20
+|   |   |   |   +---readline-6.3p08
+|   |   |   |   +---gcc-7.3.0-lib
+|   |   |   |   +---icu4c-59.1
+|   |   |   +---spidermonkey-52.9.0-dev
+|   |   |   |   +---nspr-4.20
+|   |   |   |   +---bash-4.4-p23
+|   |   |   |   +---nspr-4.20-dev
+|   |   |   |   |   +---nspr-4.20
+|   |   |   |   |   +---bash-4.4-p23
+|   |   |   |   |   +---nspr-4.20-dev
+|   |   |   |   +---spidermonkey-52.9.0
+|   |   |   |   +---spidermonkey-52.9.0-dev
+|   |   |   +---linux-pam-1.3.0
+|   |   |   +---systemd-239-lib
+|   |   |   +---polkit-0.115
+|   |   +---gconf-3.2.6
+|   +---libXi-1.7.9
+|   +---gtk+-2.24.32
+|   +---libXtst-1.2.3
+|   |   +---glibc-2.27
+|   |   +---libXdmcp-1.1.2
+|   |   +---libXau-1.0.8
+|   |   +---libxcb-1.13.1
+|   |   +---libX11-1.6.6
+|   |   +---libXext-1.3.3
+|   |   +---libXi-1.7.9
+|   |   +---recordproto-1.14.2
+|   |   |   +---recordproto-1.14.2
+|   |   +---libXtst-1.2.3
+|   +---gnome-vfs-2.24.4
+|   |   +---glibc-2.27
+|   |   +---pcre-8.42
+|   |   +---zlib-1.2.11
+|   |   +---util-linux-2.32.1
+|   |   +---libffi-3.2.1
+|   |   +---glib-2.56.0
+|   |   +---gamin-0.1.10
+|   |   |   +---glibc-2.27
+|   |   |   +---pcre-8.42
+|   |   |   +---glib-2.56.0
+|   |   |   +---gamin-0.1.10
+|   |   +---ORBit2-2.14.19
+|   |   +---acl-2.2.52
+|   |   +---libxml2-2.9.8
+|   |   +---systemd-239-lib
+|   |   +---dbus-1.12.10-lib
+|   |   +---dbus-glib-0.110
+|   |   +---gcc-7.3.0-lib
+|   |   +---avahi-0.7
+|   |   +---bzip2-1.0.6.0.1
+|   |   +---gconf-3.2.6
+|   |   +---openssl-1.0.2p
+|   |   +---gnome-vfs-2.24.4
+|   +---openjdk-8u192b26-jre
++---pathway.gpml
++---PathVisio-3.3.0-Homo_sapiens.desktop
+|   +---source
+|   +---PathVisio-3.3.0-Homo_sapiens.desktop
++---PathVisio-3.3.0-Homo_sapiens
