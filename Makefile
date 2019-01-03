@@ -110,7 +110,7 @@ installPackages:
 	@touch $@
 
 confGPMLConverter:
-	@sudo bash extensions/GPMLConverter/install wikipathways
+	bash extensions/GPMLConverter/install wikipathways
 	@touch $@
 
 setupApache:
