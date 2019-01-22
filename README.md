@@ -1,5 +1,11 @@
 # Prerequisite
 
+Good to have:
+
+ - git cli
+
+Required:
+
  - apache2
  - make
  - mysql
