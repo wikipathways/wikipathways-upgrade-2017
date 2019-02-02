@@ -10,11 +10,13 @@ Required:
  - make
  - mysql
 
-On Ubuntu 18.04
+On Ubuntu 18.04:
 
+```shell
 apt-get install mysql-server
 apt-get install make
 apt-get install apache2
+```
 
 # Installation
 
