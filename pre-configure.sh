@@ -1,5 +1,21 @@
 #!/bin/bash
 
+#Installs dependecies on a vanilla ubuntu 18.04
+#make // required by install
+#mysql-server // required by mediawiki
+#apache2 // required by mediawiki
+
+#a2enmod rewrite // required by mediawiki
+#a2enmod headers // required by mediawiki
+
+#php // required by mediawiki
+#php-xml // required by mediawiki
+#php-mbstring // required by mediawiki
+#php-mysql // required by mediawiki
+
+#composer  // required by install
+#zip //composer dependency
+
 apt-get install make
 apt-get install mysql-server
 apt-get install apache2
