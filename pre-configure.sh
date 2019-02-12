@@ -16,6 +16,8 @@
 #composer  // required by install
 #zip //composer dependency
 
+#xmlstartlet required by GPML2 
+
 apt-get install make
 apt-get install mysql-server
 apt-get install apache2
@@ -30,3 +32,5 @@ apt-get install php-mysql
 
 apt-get install composer
 apt-get install zip //composer dependency
+
+apt-get install xmlstarlet 
