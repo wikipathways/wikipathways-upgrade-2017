@@ -1,3 +1,23 @@
+# Prerequisite
+
+Good to have:
+
+ - git cli
+
+Required:
+
+ - apache2
+ - make
+ - mysql
+
+On Ubuntu 18.04:
+
+```shell
+apt-get install mysql-server
+apt-get install make
+apt-get install apache2
+```
+
 # Installation
 
 1. Run setup-site.sh to set up the site after doing an initial checkout
